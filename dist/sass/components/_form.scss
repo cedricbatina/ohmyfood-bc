@@ -1,10 +1,20 @@
 .form{
-    display: inline-block;
 
-& > input{
-        border: 1px solid black;
-        width: 100%;
+        position: fixed;
+        margin-top: 0%;
+        position: absolute;
+        margin-top: 0%;
+        width: 1024px;
+        display: inline-table;
+        height: 2rem;
+        font: size 2rem;
+      background-color: lighten($note-color, 50);
+& + input{
+        border: 0.5px solid black;
+        border-radius: 10px;
+        width: 990px;
 
     }
+
         
 }
