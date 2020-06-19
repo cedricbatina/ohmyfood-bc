@@ -1,8 +1,26 @@
 footer{
-    height: 3rem;
+    display: flex;
+    flex-direction: row;;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    height: 4rem;
     background-color: $first-color;
     color: $second-color;    
-    font-size: 400;
+    font-size: 700;
     width: 100%;
-    padding: 1re 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-top: 1rem;}
+
+    .mentions{
+        padding-left: 1rem;
+    }
+    .contact{
+    padding-right: 1rem;
+    & > a{
+        text-decoration: none;
+    
+}
+    
+    
 }
