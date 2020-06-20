@@ -13,31 +13,31 @@
         & > .note{
         @include grid-size;
         margin-right: 2.5rem;
-        background-color: $note-color;}
-        & > span{
-            text-decoration: none;
+        background-color: $note-color;
+        }
+        & > .chic{
+            @include grid-size;
         }
     }
-        & > .chic{
-            @include grid-size;}
-            & > span{
-                text-decoration: none;
             
     &__quatre{
         display: flex;
         flex-flow: row nowrap;
+        & > .delice{
+             @include grid-size;
+             margin-right: 2.5rem;
+                    }
+        & > .palette{
+            @include grid-size;
     }
-.delice{
-    @include grid-size;
-    margin-right: 2.5rem;}
-    & > span{text-decoration: none;
-    }
-.palette{
-    @include grid-size;
-    }
+}
+}
+a
+{
+    text-decoration: none;
 }
 
 
 
 
-}
+

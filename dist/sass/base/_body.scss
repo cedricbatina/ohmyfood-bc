@@ -1,0 +1,31 @@
+.page
+    {
+    display: flex;
+    flex-flow: column nowrap;
+    }
+.menu
+    {  
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: center;
+        align-items: center;
+    }
+
+.menu__item
+        {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            width: 50%;
+        }
+    
+
+h1
+  {
+    text-align: center;
+  }
+
+h3  {
+    text-align: center;
+    }
+    

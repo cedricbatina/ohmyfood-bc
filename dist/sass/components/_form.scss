@@ -1,20 +1,26 @@
 .form{
-
         position: fixed;
         margin-top: 0%;
         position: absolute;
         margin-top: 0%;
         width: 1024px;
-        display: inline-table;
+        display: inline-flex;
+        flex-flow: row nowrap;
         height: 2rem;
-        font: size 2rem;
-      background-color: lighten($note-color, 50);
-& + input{
-        border: 0.5px solid black;
-        border-radius: 10px;
-        width: 990px;
+        font-size: 3rem;
+        background-color: #c1c2c4;
 
-    }
-
-        
 }
+
+input
+    {
+    border-radius: 5px;
+    background-color: 1px solid;
+    width: 95%;
+    height: 2rem;
+    }
+i{
+    font-size: 2.3rem;
+}   
+        
+

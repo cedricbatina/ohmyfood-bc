@@ -1,7 +1,23 @@
 #container {
-  border: 0.3px solid black;
+  border-right: 0.3px solid #67000a;
+  border-left: 0.3px solid #67000a;
   width: 1024px;
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
 }
 
 .form {
@@ -10,16 +26,27 @@
   position: absolute;
   margin-top: 0%;
   width: 1024px;
-  display: inline-table;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
   height: 2rem;
-  font: size 2rem;
-  background-color: white;
+  font-size: 3rem;
+  background-color: #c1c2c4;
 }
 
-.form + input {
-  border: 0.5px solid black;
-  border-radius: 10px;
-  width: 990px;
+input {
+  border-radius: 5px;
+  background-color: 1px solid;
+  width: 95%;
+  height: 2rem;
+}
+
+i {
+  font-size: 2.3rem;
 }
 
 .prochainement {
@@ -47,7 +74,6 @@ header {
   padding-top: 0rem;
   padding-bottom: 9rem;
   font-size: 3rem;
-  position: fixed;
 }
 
 footer {
@@ -67,16 +93,12 @@ footer {
   height: 4rem;
   background-color: #009688;
   color: #ffc107;
-  font-size: 700;
   width: 1024px;
   padding: 1rem 1rem 1rem 1rem;
   margin-top: 2.5rem;
   font-size: 2rem;
-  position: fixed;
   align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: space-between;
 }
 
 footer + .mentions {
@@ -89,7 +111,7 @@ footer + .contact {
   padding-right: 1rem;
 }
 
-footer + .contact > a {
+a {
   text-decoration: none;
 }
 
@@ -133,11 +155,7 @@ footer + .contact > a {
   background-color: #ffcdd2;
 }
 
-.grid__deux > span {
-  text-decoration: none;
-}
-
-.grid > .chic {
+.grid__deux > .chic {
   border: 1px solid black;
   text-align: center;
   padding-top: 10rem;
@@ -148,11 +166,7 @@ footer + .contact > a {
   width: 100%;
 }
 
-.grid > span {
-  text-decoration: none;
-}
-
-.grid > span__quatre {
+.grid__quatre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -162,7 +176,7 @@ footer + .contact > a {
           flex-flow: row nowrap;
 }
 
-.grid > span .delice {
+.grid__quatre > .delice {
   border: 1px solid black;
   text-align: center;
   padding-top: 10rem;
@@ -174,11 +188,7 @@ footer + .contact > a {
   margin-right: 2.5rem;
 }
 
-.grid > span > span {
-  text-decoration: none;
-}
-
-.grid > span .palette {
+.grid__quatre > .palette {
   border: 1px solid black;
   text-align: center;
   padding-top: 10rem;
@@ -187,5 +197,9 @@ footer + .contact > a {
   padding-right: 5rem;
   text-decoration: none;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=main.css.map */
