@@ -6,26 +6,38 @@
 .menu
     {  
         display: flex;
-        flex-flow: column nowrap;
-        align-content: center;
-        align-items: center;
-    }
-
-.menu__item
-        {
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            width: 50%;
-        }
+        flex-flow: row nowrap;
+        width: 100%;
     
+&__item
+        { text-align: left;
+          width: 50%;
+          margin-bottom: 1.5rem;
+          margin-left: 5rem;
+        }
 
+&__price
+{
+    width: 50%;
+    text-align: right;
+    margin-bottom: 1.5rem;
+    margin-right: 5rem;
+}
+
+}        
+          
 h1
   {
     text-align: center;
   }
 
-h3  {
+h3 
+ {
     text-align: center;
-    }
-    
+}
+.page-note{
+    background-color: $note-color;
+}
+p{
+    text-align: center;
+}

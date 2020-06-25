@@ -5,13 +5,16 @@
 
 @import "./base/container";
 @import "./base/font";
+@import "./base/body";
 
 
 @import "./components/form";
 @import "./components/button";
+
 @import "./layouts/header";
 @import "./layouts/footer";
 
 
 @import "./pages/index";
+@import "./pages/note";
 

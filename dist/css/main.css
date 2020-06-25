@@ -10,14 +10,64 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  font: size 1.2rem;
+}
+
+.page-note {
+  background-color: #ffcdd2;
+}
+
+.page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 100%;
+}
+
+.menu__item {
+  text-align: left;
+  width: 50%;
+  margin-bottom: 1.5rem;
+  margin-left: 5rem;
+}
+
+.menu__price {
+  width: 50%;
+  text-align: right;
+  margin-bottom: 1.5rem;
+  margin-right: 5rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.page-note {
+  background-color: #ffcdd2;
+}
+
+p {
+  text-align: center;
 }
 
 .form {
@@ -94,8 +144,6 @@ footer {
   background-color: #009688;
   color: #ffc107;
   width: 1024px;
-  padding: 1rem 1rem 1rem 1rem;
-  margin-top: 2.5rem;
   font-size: 2rem;
   align-items: center;
   justify-content: space-between;
@@ -201,5 +249,21 @@ a {
 
 a {
   text-decoration: none;
+}
+
+.point1 {
+  border-radius: 15px;
+  background-color: #ffc107;
+  height: 1rem;
+  width: 1rem;
+}
+
+.page-note {
+  background-color: #ffcdd2;
+  color: #3e2723;
+}
+
+p > i {
+  color: #ec407a;
 }
 /*# sourceMappingURL=main.css.map */

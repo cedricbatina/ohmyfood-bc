@@ -6,7 +6,10 @@
     margin: auto;
     display: flex; 
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;        
+    flex-wrap: nowrap;    
+    font: size 1.2rem;    
     }
+.page-note
+{
+    background-color: $note-color;
+}

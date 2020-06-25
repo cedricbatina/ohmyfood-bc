@@ -9,3 +9,10 @@
     width: 100%;
     
 }
+@mixin point-size 
+{
+    border-radius: 15px;
+    background-color: $second-color;
+    height: map-get($font-size, regular);
+    width: map-get($font-size, regular);
+}
