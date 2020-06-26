@@ -15,10 +15,6 @@
   font: size 1.2rem;
 }
 
-.page-note {
-  background-color: #ffcdd2;
-}
-
 .page {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -70,6 +66,10 @@ p {
   text-align: center;
 }
 
+p > i {
+  color: #ec407a;
+}
+
 .form {
   position: fixed;
   margin-top: 0%;
@@ -99,10 +99,6 @@ i {
   font-size: 2.3rem;
 }
 
-.prochainement {
-  text-align: center;
-}
-
 .prochainement__btn {
   border-radius: 15px;
   background-color: #009688;
@@ -112,6 +108,48 @@ i {
   text-align: center;
   padding: 0rem 3rem 1rem 3rem;
   font-size: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.prochainement__btn:hover::after {
+  opacity: 1;
+}
+
+.prochainement__btn:hover + .point__first {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation-name: point1;
+          animation-name: point1;
+}
+
+.prochainement__btn:hover + .point__first + .point__second {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation-name: point2;
+          animation-name: point2;
+}
+
+.prochainement__btn:hover + .point__first + .point__second + .point__third {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-animation-name: point3;
+          animation-name: point3;
+}
+
+.prochainement__btn::after {
+  content: "";
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #00c9b6;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 750ms;
+  transition: opacity 750ms;
 }
 
 header {
@@ -134,9 +172,8 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -146,15 +183,14 @@ footer {
   width: 1024px;
   font-size: 2rem;
   align-items: center;
-  justify-content: space-between;
 }
 
-footer + .mentions {
+footer__mentions {
   text-align: left;
   padding-left: 1rem;
 }
 
-footer + .contact {
+footer__contact {
   text-align: right;
   padding-right: 1rem;
 }
@@ -201,6 +237,7 @@ a {
   width: 100%;
   margin-right: 2.5rem;
   background-color: #ffcdd2;
+  color: #4e342e;
 }
 
 .grid__deux > .chic {
@@ -212,6 +249,10 @@ a {
   padding-right: 5rem;
   text-decoration: none;
   width: 100%;
+}
+
+.grid__deux > i {
+  color: #ec407a;
 }
 
 .grid__quatre {
@@ -248,22 +289,72 @@ a {
 }
 
 a {
+  color: #4e342e;
   text-decoration: none;
 }
 
-.point1 {
+.prochainement {
+  text-align: center;
+}
+
+.point__first {
   border-radius: 15px;
   background-color: #ffc107;
   height: 1rem;
   width: 1rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
+  -webkit-animation-name: point1;
+          animation-name: point1;
+}
+
+.point__second {
+  border-radius: 15px;
+  background-color: #ffc107;
+  height: 1rem;
+  width: 1rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+  -webkit-animation-name: point2;
+          animation-name: point2;
+}
+
+.point__third {
+  border-radius: 15px;
+  background-color: #ffc107;
+  height: 1rem;
+  width: 1rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation-delay: 2000ms;
+          animation-delay: 2000ms;
+  -webkit-animation-name: point3;
+          animation-name: point3;
 }
 
 .page-note {
   background-color: #ffcdd2;
-  color: #3e2723;
+  color: #4e342e;
 }
 
-p > i {
-  color: #ec407a;
+.page-note > a {
+  -webkit-text-decoration-color: #4e342e;
+          text-decoration-color: #4e342e;
 }
 /*# sourceMappingURL=main.css.map */

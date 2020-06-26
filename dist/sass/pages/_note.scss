@@ -4,7 +4,9 @@
 {
     background-color: $note-color;
     color: $note-color-text;
-}
-p > i{
-    color: $icon-color;
+    & > a 
+    {
+    text-decoration-color: $note-color-text;
+
+    }
 }

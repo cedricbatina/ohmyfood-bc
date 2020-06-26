@@ -13,9 +13,13 @@
         @include grid-size;
         margin-right: 2.5rem;
         background-color: $note-color;
+        color:$note-color-text;
         }
         & > .chic{
             @include grid-size;
+        }
+        & > i{
+            color: $icon-color;
         }
     }
             
@@ -26,20 +30,40 @@
              @include grid-size;
              margin-right: 2.5rem;
                     }
-        & > .palette{
+        & > .palette
+        {
             @include grid-size;
-    }
+        }
 }
 }
 a
-{
-    text-decoration: none;
-}
-.point1{
-    
-    @include point-size
-}
+{   color: $note-color-text;
+    text-decoration: none;}
+.prochainement{
+    text-align: center;
+}    
 
+.point__first
+{
+    @include point-size;
+    @include point-animation;
+    animation-delay: 1000ms;
+    animation-name: point1;
+}
+.point__second
+{
+    @include point-size;
+    @include point-animation;
+    animation-delay: 1500ms;
+    animation-name: point2;
+}
+.point__third
+{
+    @include point-size;
+    @include point-animation;
+    animation-delay: 2000ms;
+    animation-name: point3;
+}
 
 
 
