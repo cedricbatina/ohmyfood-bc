@@ -1,4 +1,5 @@
 footer{
+    font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Geneva, Verdana, sans-serif;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -6,16 +7,21 @@ footer{
     height: 4rem;
     background-color: $first-color;
     color: $second-color;    
-    width: 1024px;
     font-size: map-get($font-size, medium); 
     align-items: center;
-    &__mentions{
+    position: sticky;
+    bottom: 0px;
+    margin-top: 2rem;
+    & > .mentions{
         text-align: left;
         padding-left: 1rem;
+    color: $second-color;
+
 
     }
-    &__contact{
-        text-align: right;
+    & > .contact{
+    text-align: right;
+    color: $second-color;
     padding-right: 1rem;}
 
     }

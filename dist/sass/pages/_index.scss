@@ -1,44 +1,96 @@
 .grid{
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
     align-items: center;
-    margin-top: 10%;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2rem;
     margin-bottom: 2rem;
-    width: 100%;
-    &__deux{
-        display: flex;
-        flex-flow: row nowrap;
-        margin-bottom: 2.5rem;
-        & > .note{
-        @include grid-size;
-        margin-right: 2.5rem;
-        background-color: $note-color;
-        color:$note-color-text;
-        }
-        & > .chic{
-            @include grid-size;
-        }
-        & > i{
-            color: $icon-color;
-        }
-    }
-            
-    &__quatre{
-        display: flex;
-        flex-flow: row nowrap;
-        & > .delice{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+     }
+
+
+
+
+
+
+.delice{
              @include grid-size;
-             margin-right: 2.5rem;
                     }
-        & > .palette
+.palette
         {
             @include grid-size;
         }
+.chic{
+    @include grid-size;
+
 }
+
+
+.note{
+    @include grid-size;
+    background-color: $note-color;
+    color:$note-color-text;
+    &__menu{
+        position: relative;
+    z-index: 1;
+    @include menu-animation; 
+
+        &:hover{
+        transform: scale(1.75);
+
+        &::before{
+            opacity: 1;
+                }
+        &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;  
+                left: 0;
+                background-color: lighten($note-color-text, 20);
+                opacity: 0;
+                z-index: -1;
+                transition: opacity 1000ms;
+        }
+    }
+
+
 }
+
+    .chic{
+        @include grid-size;
+        color: linear-gradient
+        (
+            to left,
+            rgba($chic-color-second, 0.9),
+            rgba($chic-color-first, 0.3)
+        );
+
+    }
+
+    & > .delice{
+        @include grid-size;
+        margin-right: 2.5rem;
+               }
+   & > .palette
+   {
+       @include grid-size;
+   }
+
+
+
+
+
+
+
 a
-{   color: $note-color-text;
-    text-decoration: none;}
+{   
+text-decoration: none;
+}
 .prochainement{
     text-align: center;
 }    
@@ -47,23 +99,40 @@ a
 {
     @include point-size;
     @include point-animation;
-    animation-delay: 1000ms;
-    animation-name: point1;
+    animation-delay: 500ms;
+    animation-name: point;
+    animation-duration: 1500ms;
+    animation-fill-mode: both;
 }
 .point__second
 {
     @include point-size;
     @include point-animation;
-    animation-delay: 1500ms;
-    animation-name: point2;
+    animation-delay: 1000ms;
+    animation-name: point;
+    animation-duration: 1500ms;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
 }
 .point__third
 {
     @include point-size;
     @include point-animation;
-    animation-delay: 2000ms;
-    animation-name: point3;
-}
+    animation-delay: 1500ms;
+    animation-name: point;
+    animation-duration: 1500ms;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
 
+}
+@keyframes point{
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+    }
 
 
