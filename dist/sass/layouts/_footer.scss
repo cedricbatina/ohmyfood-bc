@@ -2,7 +2,7 @@ footer{
     font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Geneva, Verdana, sans-serif;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 4rem;
     background-color: $first-color;
@@ -11,7 +11,6 @@ footer{
     align-items: center;
     position: sticky;
     bottom: 0px;
-    margin-top: 2rem;
     & > .mentions{
         text-align: left;
         padding-left: 1rem;
@@ -23,7 +22,6 @@ footer{
     text-align: right;
     color: $second-color;
     padding-right: 1rem;}
-
     }
 a{
     text-decoration: none;

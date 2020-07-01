@@ -8,23 +8,19 @@
     text-decoration: none;
     width: 25%;
     height: 15rem;
-    
-    
-}
-@mixin point-size 
-{
-    border-radius: 15px;
-    background-color: $second-color;
-    height: map-get($font-size, regular);
-    width: map-get($font-size, regular);
+    margin:1rem 1rem 1rem 1rem;
 }
 
-@mixin point-animation 
-{
-    transform: scale(0);
-    animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);;
+@mixin animpoint 
+{   
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: animpoint;
+    transform: scale(1.5);
 }
-@mixin menu-animation {
+
+@mixin menu-animation 
+{
     transform: scale(1);
     transition-duration: 1000ms;
     transition-timing-function: ease-in-out;

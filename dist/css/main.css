@@ -62,12 +62,9 @@ h3 {
   background-color: #ffcdd2;
 }
 
-p {
-  text-align: center;
-}
-
 p > i {
-  color: #ec407a;
+  text-align: center;
+  color: linear-gradient to right, #ec407a, 0.9, #ffcdd2, 0.3;
 }
 
 .form {
@@ -88,6 +85,10 @@ p > i {
   background-color: #c1c2c4;
 }
 
+i {
+  font-size: 2.3rem;
+}
+
 input {
   border-radius: 5px;
   background-color: 1px solid;
@@ -95,8 +96,9 @@ input {
   height: 2rem;
 }
 
-i {
-  font-size: 2.3rem;
+.prochainement {
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .prochainement__btn {
@@ -108,46 +110,73 @@ i {
   text-align: center;
   padding: 0rem 3rem 1rem 3rem;
   font-size: 2rem;
-  position: relative;
-  z-index: 1;
 }
 
-.prochainement__btn:hover {
-  /* & + .point__first{
-        transform: scale(1);
-        animation-duration: 400ms;
-    
-    & + .point__second{
-        transform: scale(1);
-        animation-duration: 500ms;
-        animation-delay: 300ms;
-    
-    & + .point__third{
-        transform: scale(1);
-        animation-duration: 600ms;
-        animation-delay: 600ms;
-    }
-}
-}*/
+.prochainement__btn .point1 {
+  -webkit-animation-name: point;
+          animation-name: point;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: animpoint;
+          animation-name: animpoint;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
-.prochainement__btn:hover::after {
-  opacity: 1;
+.prochainement__btn .point2 {
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+  -webkit-animation-duration: 900ms;
+          animation-duration: 900ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: animpoint;
+          animation-name: animpoint;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
-.prochainement__btn:hover::after {
-  content: "";
-  position: absolute;
-  border-radius: 15px;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #00c9b6;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 750ms;
-  transition: opacity 750ms;
+.prochainement__btn .point3 {
+  -webkit-animation-duration: 150ms;
+          animation-duration: 150ms;
+  -webkit-animation-delay: 850ms;
+          animation-delay: 850ms;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: animpoint;
+          animation-name: animpoint;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+@-webkit-keyframes animpoint {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+}
+
+@keyframes animpoint {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
 }
 
 header {
@@ -171,8 +200,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -184,7 +214,6 @@ footer {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0px;
-  margin-top: 2rem;
 }
 
 footer > .mentions {
@@ -236,6 +265,7 @@ a {
   text-decoration: none;
   width: 25%;
   height: 15rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 .palette {
@@ -248,18 +278,7 @@ a {
   text-decoration: none;
   width: 25%;
   height: 15rem;
-}
-
-.chic {
-  border: 1px solid #4e342e;
-  text-align: center;
-  padding-top: 15rem;
-  padding-bottom: 10rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
-  text-decoration: none;
-  width: 25%;
-  height: 15rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
 .note {
@@ -272,6 +291,7 @@ a {
   text-decoration: none;
   width: 25%;
   height: 15rem;
+  margin: 1rem 1rem 1rem 1rem;
   background-color: #ffcdd2;
   color: #4e342e;
 }
@@ -289,30 +309,38 @@ a {
           transition-delay: 100ms;
 }
 
+.note__menu > h3 {
+  font-family: Caveat;
+}
+
 .note__menu:hover {
   -webkit-transform: scale(1.75);
           transform: scale(1.75);
 }
 
-.note__menu:hover::before {
+.note__menu:hover::after {
   opacity: 1;
 }
 
 .note__menu:hover::after {
   content: "";
   position: absolute;
+  z-index: -1;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #8e5f54;
+  background-color: white;
   opacity: 0;
-  z-index: -1;
-  -webkit-transition: opacity 1000ms;
-  transition: opacity 1000ms;
+  -webkit-transition: opacity 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.note .chic {
+.note__menu__title {
+  font-family: Devonshire;
+}
+
+.chic {
   border: 1px solid #4e342e;
   text-align: center;
   padding-top: 15rem;
@@ -322,10 +350,39 @@ a {
   text-decoration: none;
   width: 25%;
   height: 15rem;
-  color: linear-gradient to left, rgba(49, 27, 146, 0.9), rgba(230, 81, 0, 0.3);
+  margin: 1rem 1rem 1rem 1rem;
+  background-color: white;
 }
 
-.note > .delice {
+.chic__menu {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-delay: 100ms;
+          transition-delay: 100ms;
+  background-color: white;
+  font-family: Parisienne;
+  color: linear-gradient to left, #311b92, 0.9, #e65100, 0.3;
+}
+
+.chic__menu > h3 {
+  font-family: Parisienne;
+  text-transform: uppercase;
+}
+
+.chic__menu:hover {
+  -webkit-transform: scale(1.75);
+          transform: scale(1.75);
+}
+
+.chic__title {
+  font-family: Lobster;
+}
+
+.chic .delice {
   border: 1px solid #4e342e;
   text-align: center;
   padding-top: 15rem;
@@ -335,10 +392,10 @@ a {
   text-decoration: none;
   width: 25%;
   height: 15rem;
-  margin-right: 2.5rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
-.note > .palette {
+.chic .palette {
   border: 1px solid #4e342e;
   text-align: center;
   padding-top: 15rem;
@@ -348,100 +405,15 @@ a {
   text-decoration: none;
   width: 25%;
   height: 15rem;
+  margin: 1rem 1rem 1rem 1rem;
 }
 
-.note a {
+.chic a {
   text-decoration: none;
-}
-
-.note .prochainement {
-  text-align: center;
-}
-
-.note .point__first {
-  border-radius: 15px;
-  background-color: #ffc107;
-  height: 1rem;
-  width: 1rem;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-  -webkit-animation-name: point;
-          animation-name: point;
-  -webkit-animation-duration: 1500ms;
-          animation-duration: 1500ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-}
-
-.note .point__second {
-  border-radius: 15px;
-  background-color: #ffc107;
-  height: 1rem;
-  width: 1rem;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-animation-delay: 1000ms;
-          animation-delay: 1000ms;
-  -webkit-animation-name: point;
-          animation-name: point;
-  -webkit-animation-duration: 1500ms;
-          animation-duration: 1500ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-.note .point__third {
-  border-radius: 15px;
-  background-color: #ffc107;
-  height: 1rem;
-  width: 1rem;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  -webkit-animation-delay: 1500ms;
-          animation-delay: 1500ms;
-  -webkit-animation-name: point;
-          animation-name: point;
-  -webkit-animation-duration: 1500ms;
-          animation-duration: 1500ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@-webkit-keyframes point {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes point {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
 }
 
 .page-note {
+  font-family: Devonshire;
   background-color: #ffcdd2;
   color: #4e342e;
 }
