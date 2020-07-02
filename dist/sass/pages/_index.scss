@@ -11,100 +11,126 @@
     width: 80%;
      }
 
-
-
-
-
-
-.delice{
-             @include grid-size;
-                    }
-.palette
-        {
-            @include grid-size;
-        }
-
-.note
+.note-block
 {
-    @include grid-size;
-    background-color: $note-color;
-    color:$note-color-text;
-    &__menu{
-        position: relative;
-        z-index: 1;
-        @include menu-animation; 
-        & > h3 {
-            font-family: Caveat;
-        }
-        &:hover{
-            transform: scale(1.75);
-        
-         &::after{
-            opacity: 1;
-                }
-         &::after{
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                right: 0;
-                bottom: 0;  
-                left: 0;
-                background-color: lighten($note-color, 50);
-                opacity: 0;
-                transition: opacity 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                 }
-                }
-     &__title{
-        font-family: Devonshire;
-        }
-        
-    }
+@include grid-size;
+background-color: $note-color;
 }
-.chic{
-    @include grid-size;
-    background-color: lighten($chic-color-first, 90);
-    
-    &__menu{
-        @include menu-animation; 
-        background-color: lighten($chic-color-first, 90);
-        font-family: Parisienne;
-        color: linear-gradient
-              (
-            to left,
-              ($chic-color-second, 0.9),
-              ($chic-color-first, 0.3)
-              );
-        & > h3
-            {
-            font-family: Parisienne;
-            text-transform: uppercase;
-            }
+.note
+{  
+    text-align: center;
+    @include menu-animation; 
+        & > i 
+        {
+            color: linear-gradient( to left, 
+                    lighten($icon-color, 2) 20%,
+                   lighten($note-color, 5) 30%
+            );
+        }
+        &__title
+        {
+           color:$note-color-text;
+           font-family: Devonshire, Arial, Helvetica, sans-serif;
+           font-weight: bold;
+        }
+        &__title2
+        {
+         @include home-menu-font
+        }
         &:hover
         {
             transform: scale(1.75);
+            opacity: 0.6;
+        }
+     }
+
+.chic-block
+ { 
+    @include grid-size;   
+    background-color: lighten($chic-color-second, 80);
+ }
+.chic
+ {  
+    text-align: center;
+    @include menu-animation;
+    &__title
+        {      
+            color: linear-gradient  (to left,($chic-color-second, 0.7),($chic-color-first, 0.3));
+            font-style: italic;
+            font-family: Lobster Two;
+            font-weight: bold;
+            }
+    &__title2
+    {
+        @include home-menu-font($color:$chic-color-first)
+            }
+    &:hover
+        {
+            transform: scale(1.75);
+            opacity: 0.6;
         }
 
-        }
-    &__title{
-        font-family: Lobster;
+        
     }
 
- .delice{
+.delice-block
+    {
         @include grid-size;
-               }
- .palette
-   {
-       @include grid-size;
-   }
-
-
-a{   
-text-decoration: none;
+        background-color: lighten($first-delice-color,45);
+    }
+.delice
+{
+    text-align: center;
+    @include menu-animation;
+    &__title
+    {
+        font-family: Parisienne;
+        font-weight: bold;
+    }
+    &__title2
+    {
+      @include home-menu-font($color:$second-delice-color)
+    }
+    &:hover
+    {
+        transform: scale(1.75);
+        opacity: 0.6;
+    }
 }
 
 
+.palette-block
+   {
+       @include grid-size;
+       background-color: lighten($palette-color, 60);
+   }
+.palette
+{
+ text-align: center;
+ @include menu-animation;
+    &__title{
+        font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+    }
+    &__title2{
+        @include home-menu-font($color:$palette-color)
+    }
+    &:hover{
+        transform: scale(1.75);
+        opacity: 0.6;
+    }
+}
+   
 
-}  
+
+.point3
+{
+        animation-duration: 150ms;
+        animation-delay: 850ms;
+        @include animpoint;
+    }
 
 
+
+
+ 

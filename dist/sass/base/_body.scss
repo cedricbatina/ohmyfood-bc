@@ -38,14 +38,18 @@ h3
 .page-note{
     background-color: $note-color;
 }
-p > i{
+p > i
+{
       text-align: center;
       color: linear-gradient
         (
             to right,
-            ($icon-color, 0.9),
+            ($icon-color, 0.7),
             ($note-color, 0.3)
         );
 
   }
+a{
+  text-decoration: none;
+}
 

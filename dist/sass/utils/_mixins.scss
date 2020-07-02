@@ -1,7 +1,8 @@
-@mixin grid-size {
-    border: 1px solid $note-color-text;
+@mixin grid-size 
+{   box-shadow: $shadow-color;
     text-align: center;
     padding-top: 15rem;
+    display: block;
     padding-bottom: 10rem;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -25,4 +26,12 @@
     transition-duration: 1000ms;
     transition-timing-function: ease-in-out;
     transition-delay: 100ms;
+}
+
+@mixin home-menu-font($color:$note-color-text)
+{
+ font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
+ text-transform: uppercase;
+ color: $color;
+ 
 }
