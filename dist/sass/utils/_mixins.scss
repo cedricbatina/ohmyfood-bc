@@ -1,23 +1,28 @@
-@mixin grid-size 
+@mixin grid-size($background: $note-color)
 {   box-shadow: $shadow-color;
     text-align: center;
     padding-top: 15rem;
     display: block;
+    cursor: pointer;
     padding-bottom: 10rem;
     padding-left: 5rem;
     padding-right: 5rem;
     text-decoration: none;
     width: 25%;
     height: 15rem;
-    margin:1rem 1rem 1rem 1rem;
+    margin: 1rem 1rem 1rem 1rem;
+    font-weight: 1.5rem;
+    font-size: 1.8rem;
+    background-color: $background;
 }
 
-@mixin animpoint 
+
+@mixin animation-point 
 {   
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-name: animpoint;
-    transform: scale(1.5);
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 @mixin menu-animation 
@@ -33,5 +38,18 @@
  font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
  text-transform: uppercase;
  color: $color;
- 
-}
+ }
+
+ @mixin shaking 
+ {
+     animation-name: shake;
+     animation-duration: 1000ms;
+     animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+     animation-direction: alternate;
+     animation-iteration-count: infinite;
+     animation-fill-mode: both;
+ }
+ @mixin menu-zoom {
+    transform: scale(1.5);
+    opacity: 0.6;
+ }

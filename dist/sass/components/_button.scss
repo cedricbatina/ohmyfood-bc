@@ -4,7 +4,9 @@
     text-align: center;
     margin-bottom: 2rem;
 }
-
+span{
+    display: inline-block;
+}
 .prochainement__btn{   
     border-radius: 15px;
     background-color: $first-color;
@@ -14,29 +16,27 @@
     text-align: center;
     padding: 0rem 3rem 1rem 3rem;
     font-size: 2rem;
-   
-}
-.point1
-{
+    & > .point1{
+    transform: scale(2);
     animation-duration: 1000ms;
-    @include animpoint;
-
-
-
+    @include animation-point;
+}
     
-.point2
-{  
+    & > .point2{
+    transform: scale(2);
     animation-delay: 100ms;
     animation-duration: 900ms;
-    @include animpoint;
+    @include animation-point;
+}
 
-.point3
-{
-        animation-duration: 150ms;
-        animation-delay: 850ms;
-        @include animpoint;
+    & > .point3{
+        transform: scale(2);
+        animation-delay: 150ms;
+        animation-duration: 850ms;
+        @include animation-point;
     }
-}}
+}
+
 
 @keyframes animpoint{
     from {

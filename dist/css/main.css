@@ -60,6 +60,8 @@ h3 {
 
 .page-note {
   background-color: #ffcdd2;
+  width: 80%;
+  margin: auto;
 }
 
 p > i {
@@ -105,6 +107,10 @@ input {
   margin-bottom: 2rem;
 }
 
+span {
+  display: inline-block;
+}
+
 .prochainement__btn {
   border-radius: 15px;
   background-color: #009688;
@@ -116,7 +122,9 @@ input {
   font-size: 2rem;
 }
 
-.point1 {
+.prochainement__btn > .point1 {
+  -webkit-transform: scale(2);
+          transform: scale(2);
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
   -webkit-animation-fill-mode: both;
@@ -125,11 +133,13 @@ input {
           animation-iteration-count: infinite;
   -webkit-animation-name: animpoint;
           animation-name: animpoint;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-.point1 .point2 {
+.prochainement__btn > .point2 {
+  -webkit-transform: scale(2);
+          transform: scale(2);
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
   -webkit-animation-duration: 900ms;
@@ -140,23 +150,25 @@ input {
           animation-iteration-count: infinite;
   -webkit-animation-name: animpoint;
           animation-name: animpoint;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
-.point1 .point2 .point3 {
-  -webkit-animation-duration: 150ms;
-          animation-duration: 150ms;
-  -webkit-animation-delay: 850ms;
-          animation-delay: 850ms;
+.prochainement__btn > .point3 {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+  -webkit-animation-duration: 850ms;
+          animation-duration: 850ms;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-name: animpoint;
           animation-name: animpoint;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
+  -webkit-animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+          animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 @-webkit-keyframes animpoint {
@@ -210,6 +222,7 @@ header {
   padding-bottom: 9rem;
   font-size: 3rem;
   display: block;
+  font-weight: bold;
 }
 
 footer {
@@ -231,6 +244,7 @@ footer {
   background-color: #009688;
   color: #ffc107;
   font-size: 2rem;
+  font-weight: bold;
   align-items: center;
   position: -webkit-sticky;
   position: sticky;
@@ -243,10 +257,102 @@ footer > .mentions {
   color: #ffc107;
 }
 
+footer > .mentions:hover {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
 footer > .contact {
   text-align: right;
   color: #ffc107;
   padding-right: 1rem;
+}
+
+footer > .contact:hover {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-duration: 1000ms;
+          animation-duration: 1000ms;
+  -webkit-animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+          animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@-webkit-keyframes shake {
+  10% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  20% {
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+  }
+  40% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  50% {
+    -webkit-transform: translateY(-6%);
+            transform: translateY(-6%);
+  }
+  60% {
+    -webkit-transform: translateX(4.5%);
+            transform: translateX(4.5%);
+  }
+  80% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  100% {
+    -webkit-transform: translateY(9%);
+            transform: translateY(9%);
+  }
+}
+
+@keyframes shake {
+  10% {
+    -webkit-transform: translateX(3%);
+            transform: translateX(3%);
+  }
+  20% {
+    -webkit-transform: translateY(-3%);
+            transform: translateY(-3%);
+  }
+  40% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  50% {
+    -webkit-transform: translateY(-6%);
+            transform: translateY(-6%);
+  }
+  60% {
+    -webkit-transform: translateX(4.5%);
+            transform: translateX(4.5%);
+  }
+  80% {
+    -webkit-transform: translateX(-3%);
+            transform: translateX(-3%);
+  }
+  100% {
+    -webkit-transform: translateY(9%);
+            transform: translateY(9%);
+  }
 }
 
 .grid {
@@ -278,6 +384,7 @@ footer > .contact {
   text-align: center;
   padding-top: 15rem;
   display: block;
+  cursor: pointer;
   padding-bottom: 10rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -285,11 +392,12 @@ footer > .contact {
   width: 25%;
   height: 15rem;
   margin: 1rem 1rem 1rem 1rem;
+  font-weight: 1.5rem;
+  font-size: 1.8rem;
   background-color: #ffcdd2;
 }
 
 .note {
-  text-align: center;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-duration: 1000ms;
@@ -317,8 +425,8 @@ footer > .contact {
 }
 
 .note:hover {
-  -webkit-transform: scale(1.75);
-          transform: scale(1.75);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   opacity: 0.6;
 }
 
@@ -328,6 +436,7 @@ footer > .contact {
   text-align: center;
   padding-top: 15rem;
   display: block;
+  cursor: pointer;
   padding-bottom: 10rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -335,11 +444,12 @@ footer > .contact {
   width: 25%;
   height: 15rem;
   margin: 1rem 1rem 1rem 1rem;
-  background-color: white;
+  font-weight: 1.5rem;
+  font-size: 1.8rem;
+  background-color: #d7cff6;
 }
 
 .chic {
-  text-align: center;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-duration: 1000ms;
@@ -351,7 +461,7 @@ footer > .contact {
 }
 
 .chic__title {
-  color: linear-gradient to left, #311b92, 0.7, #e65100, 0.3;
+  color: linear-gradient(to left, #311b92, 0.7, #e65100, 0.3);
   font-style: italic;
   font-family: Lobster Two;
   font-weight: bold;
@@ -364,8 +474,8 @@ footer > .contact {
 }
 
 .chic:hover {
-  -webkit-transform: scale(1.75);
-          transform: scale(1.75);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   opacity: 0.6;
 }
 
@@ -375,6 +485,7 @@ footer > .contact {
   text-align: center;
   padding-top: 15rem;
   display: block;
+  cursor: pointer;
   padding-bottom: 10rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -382,11 +493,12 @@ footer > .contact {
   width: 25%;
   height: 15rem;
   margin: 1rem 1rem 1rem 1rem;
-  background-color: #e4e7f6;
+  font-weight: 1.5rem;
+  font-size: 1.8rem;
+  background-color: #d1d6ef;
 }
 
 .delice {
-  text-align: center;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-duration: 1000ms;
@@ -409,8 +521,8 @@ footer > .contact {
 }
 
 .delice:hover {
-  -webkit-transform: scale(1.75);
-          transform: scale(1.75);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
   opacity: 0.6;
 }
 
@@ -420,6 +532,7 @@ footer > .contact {
   text-align: center;
   padding-top: 15rem;
   display: block;
+  cursor: pointer;
   padding-bottom: 10rem;
   padding-left: 5rem;
   padding-right: 5rem;
@@ -427,11 +540,12 @@ footer > .contact {
   width: 25%;
   height: 15rem;
   margin: 1rem 1rem 1rem 1rem;
+  font-weight: 1.5rem;
+  font-size: 1.8rem;
   background-color: #e7f6e8;
 }
 
 .palette {
-  text-align: center;
   -webkit-transform: scale(1);
           transform: scale(1);
   -webkit-transition-duration: 1000ms;
@@ -454,24 +568,9 @@ footer > .contact {
 }
 
 .palette:hover {
-  -webkit-transform: scale(1.75);
-          transform: scale(1.75);
-  opacity: 0.6;
-}
-
-.point3 {
-  -webkit-animation-duration: 150ms;
-          animation-duration: 150ms;
-  -webkit-animation-delay: 850ms;
-          animation-delay: 850ms;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: animpoint;
-          animation-name: animpoint;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
+  opacity: 0.6;
 }
 
 .page-note {

@@ -5,8 +5,24 @@
     font-family: Devonshire;
     background-color: $note-color;
     color: $note-color-text;
-    & > a 
-    {
-    text-decoration-color: $note-color-text;
-    }
 }
+.page{
+
+    font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
+    background-color: $note-color;
+    color: $note-color-text;
+}
+p 
+{
+    text-align: center;
+    & > i{
+    display: inline-block;
+    background: linear-gradient
+        (
+            to right,
+            ($icon-color, 0.7),
+            ($note-color, 0.3)
+        );
+    }
+
+  }

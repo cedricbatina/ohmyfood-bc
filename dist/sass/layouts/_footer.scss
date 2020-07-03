@@ -8,20 +8,49 @@ footer{
     background-color: $first-color;
     color: $second-color;    
     font-size: map-get($font-size, medium); 
+    font-weight: bold;
     align-items: center;
     position: sticky;
     bottom: 0px;
     & > .mentions{
         text-align: left;
         padding-left: 1rem;
-    color: $second-color;
-
-
+        color: $second-color;
+        &:hover{
+        @include shaking;
+        }
     }
     & > .contact{
     text-align: right;
     color: $second-color;
     padding-right: 1rem;
+    &:hover{
+        @include shaking;
+    }
+    }
+}
+@keyframes shake{
+    10%{
+        transform: translateX($shake-intensity);
+    }
+    20%{
+        transform: translateY($shake-intensity * -1);
+
+    }
+    40%{
+        transform: translateX($shake-intensity * -1);
+    }
+    50%{
+        transform: translateY($shake-intensity * -2);
+    }
+    60%{
+        transform: translateX($shake-intensity * 1.5);
+    }
+    80%{
+        transform: translateX($shake-intensity * -1);
+    }
+    100%{
+        transform: translateY($shake-intensity * 3);
     }
 }
     

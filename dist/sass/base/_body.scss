@@ -1,5 +1,20 @@
+#container
+    {
+    border-right: 0.3px solid darken($note-color, 70);
+    border-left: 0.3px solid darken($note-color, 70);
+    width: auto;
+    margin: auto;
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: nowrap;    
+    font: size 1.2rem;  
+      
+    }
+
 .page
     {
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-flow: column nowrap;
     }
@@ -11,14 +26,14 @@
     
 &__item
         { text-align: left;
-          width: 50%;
+          width: 70%;
           margin-bottom: 1.5rem;
           margin-left: 5rem;
         }
 
 &__price
 {
-    width: 50%;
+    width: 30%;
     text-align: right;
     margin-bottom: 1.5rem;
     margin-right: 5rem;
@@ -35,20 +50,7 @@ h3
  {
     text-align: center;
 }
-.page-note{
-    background-color: $note-color;
-}
-p > i
-{
-      text-align: center;
-      color: linear-gradient
-        (
-            to right,
-            ($icon-color, 0.7),
-            ($note-color, 0.3)
-        );
 
-  }
 a{
   text-decoration: none;
 }

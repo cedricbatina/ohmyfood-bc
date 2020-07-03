@@ -1,6 +1,9 @@
-$home-title2-font:
-(
-    font-family: Caveat,
-    text-transform: uppercase,
-    
+$menu-zoom:
+ (   transform: scale(1.5),
+    opacity: 0.6,
 );
+
+$font-size:
+    (regular: 1rem,
+    medium: 2rem,
+    big:3rem);

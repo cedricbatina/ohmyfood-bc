@@ -13,19 +13,18 @@
 
 .note-block
 {
-@include grid-size;
-background-color: $note-color;
+@include grid-size($background:$note-color)
 }
 .note
 {  
-    text-align: center;
     @include menu-animation; 
         & > i 
         {
             color: linear-gradient( to left, 
-                    lighten($icon-color, 2) 20%,
+                   lighten($icon-color, 2) 20%,
                    lighten($note-color, 5) 30%
             );
+            
         }
         &__title
         {
@@ -39,23 +38,20 @@ background-color: $note-color;
         }
         &:hover
         {
-            transform: scale(1.75);
-            opacity: 0.6;
+          @include menu-zoom
         }
      }
 
 .chic-block
  { 
-    @include grid-size;   
-    background-color: lighten($chic-color-second, 80);
+    @include grid-size($background:lighten($chic-color-second,55));
+    
  }
-.chic
- {  
-    text-align: center;
+.chic{
     @include menu-animation;
     &__title
         {      
-            color: linear-gradient  (to left,($chic-color-second, 0.7),($chic-color-first, 0.3));
+            color: linear-gradient(to left,($chic-color-second, 0.7),($chic-color-first, 0.3));
             font-style: italic;
             font-family: Lobster Two;
             font-weight: bold;
@@ -65,22 +61,18 @@ background-color: $note-color;
         @include home-menu-font($color:$chic-color-first)
             }
     &:hover
-        {
-            transform: scale(1.75);
-            opacity: 0.6;
+        {   
+            @include menu-zoom;
         }
 
         
     }
-
 .delice-block
     {
-        @include grid-size;
-        background-color: lighten($first-delice-color,45);
+        @include grid-size($background:lighten($first-delice-color,40));
     }
 .delice
 {
-    text-align: center;
     @include menu-animation;
     &__title
     {
@@ -93,20 +85,17 @@ background-color: $note-color;
     }
     &:hover
     {
-        transform: scale(1.75);
-        opacity: 0.6;
+        @include menu-zoom;
     }
 }
 
 
 .palette-block
    {
-       @include grid-size;
-       background-color: lighten($palette-color, 60);
+       @include grid-size($background:lighten($palette-color,60));
    }
 .palette
 {
- text-align: center;
  @include menu-animation;
     &__title{
         font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
@@ -116,21 +105,9 @@ background-color: $note-color;
         @include home-menu-font($color:$palette-color)
     }
     &:hover{
-        transform: scale(1.75);
-        opacity: 0.6;
+        @include menu-zoom;
     }
 }
-   
-
-
-.point3
-{
-        animation-duration: 150ms;
-        animation-delay: 850ms;
-        @include animpoint;
-    }
 
 
 
-
- 
