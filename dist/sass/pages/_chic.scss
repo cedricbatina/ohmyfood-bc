@@ -1,7 +1,5 @@
 .page-chic
 {
-    width: 80%;
-    margin: auto;
-    font-family: Devonshire;
+    @include page-size;
     background-color: lighten($chic-color-second, 75);
 }

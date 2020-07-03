@@ -20,7 +20,7 @@
     @include menu-animation; 
         & > i 
         {
-            color: linear-gradient( to left, 
+            background: linear-gradient( to left, 
                    lighten($icon-color, 2) 20%,
                    lighten($note-color, 5) 30%
             );
@@ -51,7 +51,7 @@
     @include menu-animation;
     &__title
         {      
-            color: linear-gradient(to left,($chic-color-second, 0.7),($chic-color-first, 0.3));
+            background: linear-gradient(to left,($chic-color-second, 0.7),($chic-color-first, 0.3));
             font-style: italic;
             font-family: Lobster Two;
             font-weight: bold;
@@ -77,6 +77,7 @@
     &__title
     {
         font-family: Parisienne;
+        font-style: italic;
         font-weight: bold;
     }
     &__title2

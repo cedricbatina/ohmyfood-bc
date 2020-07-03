@@ -2,16 +2,12 @@
 
 .page-note
 {
-    font-family: Devonshire;
     background-color: $note-color;
+    box-shadow: $shadow-color;
     color: $note-color-text;
+    @include page-size;
 }
-.page{
 
-    font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
-    background-color: $note-color;
-    color: $note-color-text;
-}
 p 
 {
     text-align: center;

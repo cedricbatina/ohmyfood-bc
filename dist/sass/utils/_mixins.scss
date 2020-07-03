@@ -53,3 +53,8 @@
     transform: scale(1.5);
     opacity: 0.6;
  }
+ @mixin page-size
+ {
+     width: 80%;
+     margin: auto;
+ }

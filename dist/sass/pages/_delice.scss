@@ -1,0 +1,12 @@
+
+.page-delice{
+    @include page-size;
+    &__title{
+        font-family: Parisienne;
+        font-size: map-get($font-size, medium);
+    }
+    &__section{
+    font-family: Kalam;
+
+    }
+}
