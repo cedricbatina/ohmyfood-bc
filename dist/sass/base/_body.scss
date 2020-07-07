@@ -7,7 +7,7 @@
     display: flex; 
     flex-direction: column;
     flex-wrap: nowrap;    
-    font-size: 1.2rem;  
+    font-size: map-get($font-size, medium - 0.5rem);
       
     }
 
@@ -15,33 +15,50 @@
     {  
         display: flex;
         flex-flow: row nowrap;
-        width: 100%;
+        justify-content: space-between;
+        font-size: 1.5rem;
     
-&__item
+  &__item
         {
           text-align: left;
-          width: 85%;
           margin-bottom: 1.5rem;
-          margin-left: 5rem;
+          padding-left: 5rem;
         }
 
-&__price
-{
-    width: 15%;
-    text-align: right;
-    margin-bottom: map-get($fontsize, medium - .5rem);
-    margin-right: 5rem;
-}
+  &__price
+        {
+          text-align: right;
+          margin-bottom: 1.5rem;
+          font-weight: bold;
+          padding-right: 5rem;
+        }
 
-}        
+}      
+.mini{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}  
           
-.title__mini{
-  font-size: map-get($fontsize, medium);
-  font-family: Caveat;
+.title-note__mini{
+  @include title__mini-size;
 }
-
-h1, h3
+.title-delice__mini{
+  @include title__mini-size;
+}
+.title-chic__mini{
+  @include title__mini-size;
+}
+.title-palette__mini{
+  @include title__mini-size;
+}
+h1{
+  text-align: center;
+}
+ h3
   {
+    font-size: 2.5rem;
     text-align: center;
   }
 

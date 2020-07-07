@@ -1,0 +1,11 @@
+.page-palette{
+    &__section{
+        @include section-size;
+    }
+}
+.title-palette{
+    font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
+}
+.menupalette{
+    font-family: Kalam, Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,12 +1,13 @@
 
 .page-delice{
-    @include page-size;
-    &__title{
-        font-family: Parisienne;
-        font-size: map-get($font-size, medium);
-    }
     &__section{
-    font-family: Kalam;
-
+    font-family: Kalam, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    background-color: lighten($first-delice-color,50);
+    @include section-size; 
     }
+.title-delice{
+    font-family: Parisienne, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 3rem;
+}
 }

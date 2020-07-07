@@ -2,17 +2,21 @@
 
 .page-note
 {
-    background-color: $note-color;
-    box-shadow: $shadow-color;
-    color: $note-color-text;
-    @include page-size;
+    &__section{
+      font-family: Caveat;
+      background-color: $note-color;
+      @include section-size;
+    }
+}
+.title-note{
+    font-family: Devonshire;
 }
 
+
 p 
-{
+{ font-family: Devonshire;
     text-align: center;
     & > i{
-    display: inline-block;
     background: linear-gradient
         (
             to right,
@@ -22,3 +26,11 @@ p
     }
 
   }
+.note-image-first-left{
+    @include left-bar-size;
+    margin-top: map-get($font-size, bigger);
+  }
+.note-image-first-right{
+    @include right-bar-size;
+    margin-top: map-get($font-size, bigger);
+}

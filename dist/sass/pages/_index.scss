@@ -58,18 +58,16 @@
             }
     &__title2
     {
-        @include home-menu-font($color:$chic-color-first)
+         @include home-menu-font($color:$chic-color-first)
             }
     &:hover
         {   
-            @include menu-zoom;
+         @include menu-zoom;
         }
-
-        
     }
 .delice-block
     {
-        @include grid-size($background:lighten($first-delice-color,40));
+      @include grid-size($background:lighten($first-delice-color,40));
     }
 .delice
 {
@@ -86,18 +84,16 @@
     }
     &:hover
     {
-        @include menu-zoom;
+      @include menu-zoom;
     }
 }
-
-
 .palette-block
    {
-       @include grid-size($background:lighten($palette-color,60));
+      @include grid-size($background:lighten($palette-color,60));
    }
 .palette
 {
- @include menu-animation;
+    @include menu-animation;
     &__title{
         font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;

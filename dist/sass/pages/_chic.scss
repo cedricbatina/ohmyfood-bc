@@ -1,5 +1,17 @@
 .page-chic
 {
-    @include page-size;
-    background-color: lighten($chic-color-second, 75);
+    &__section{
+        @include section-size;
+        background-color: $section-background;
+
+    }
+}
+.menuchic1{
+    color: $chic-color-first;
+}
+.menuchic2{
+    color: $chic-color-second;
+}
+.menuchic3{
+    color: $palette-color;
 }

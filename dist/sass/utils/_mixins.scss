@@ -1,8 +1,8 @@
 @mixin grid-size($background: $note-color)
-{   box-shadow: $shadow-color;
+{   display: block;
+    box-shadow: 3px $shadow-color;
     text-align: center;
     padding-top: 15rem;
-    display: block;
     cursor: pointer;
     padding-bottom: 10rem;
     padding-left: 5rem;
@@ -57,4 +57,43 @@
  {
      width: 80%;
      margin: auto;
+ }
+ @mixin title__mini-size {
+    font-size: map-get($font-size, medium +.5rem);
+    font-family: Caveat;
+    font-style: italic;
+    text-align: center;
+    padding-top: map-get($font-size, regular);
+    padding-bottom: map-get($font-size, regular);
+    border-bottom: 0rem solid $note-color-text;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-duration: 1000ms;
+    transform-origin: left;
+    &:hover{
+        transform: border-bottom scaleX(1);
+        border-bottom: 5px solid $note-color-text;
+    }
+ }
+
+ @mixin left-bar-size
+ {
+    height: map-get($font-size,big);
+    float: left;
+    width: 20rem;
+ }
+ @mixin right-bar-size {
+    height: map-get($font-size,big);
+    float: right;
+    width: 20rem;
+     
+ }
+ @mixin section-size {
+    width: 80%;
+    display: block;
+    box-shadow: $shadow-color;
+    margin: auto;
+    font-weight: 1.5rem;
+    padding-top: map-get($font-size, big + 6rem);
+    padding-bottom: map-get($font-size, medium);
+    margin-bottom: map-get($font-size, medium);
  }
