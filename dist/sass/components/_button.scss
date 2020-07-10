@@ -2,7 +2,7 @@
 
 .prochainement{
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     margin-top: 2rem;
 }
 span{
@@ -19,21 +19,21 @@ span{
     font-size: 2rem;
     & > .point1{
     transform: scale(2);
-    animation-duration: 1000ms;
+    animation-duration: 1200ms;
     @include animation-point;
 }
     
     & > .point2{
     transform: scale(2);
-    animation-delay: 100ms;
-    animation-duration: 900ms;
+    animation-delay: 200ms;
+    animation-duration: 1200ms;
     @include animation-point;
 }
 
     & > .point3{
         transform: scale(2);
-        animation-delay: 150ms;
-        animation-duration: 850ms;
+        animation-delay: 300ms;
+        animation-duration: 1200ms;
         @include animation-point;
     }
 }

@@ -18,12 +18,10 @@
 .note
 {  
     @include menu-animation; 
-        & > i 
+        & i:before 
         {
-            background: linear-gradient( to left, 
-                   lighten($icon-color, 2) 20%,
-                   lighten($note-color, 5) 30%
-            );
+            background: linear-gradient(to left, $icon-color, $note-color, $icon-color, $note-color);
+            background-clip: text;
             
         }
         &__title
@@ -44,40 +42,45 @@
 
 .chic-block
  { 
-    @include grid-size($background:lighten($chic-color-second,55));
-    
+    @include grid-size($background:lighten($chic-color-second,85));
  }
 .chic{
     @include menu-animation;
     &__title
-        {      
-            background: linear-gradient(to left,($chic-color-second, 0.7),($chic-color-first, 0.3));
-            font-style: italic;
+        {   
+            /*background: -webkit-gradient(linear, left center, left bottom, from($chic-color-first), to($chic-color-second));*/
+            background: -webkit-linear-gradient(right, $chic-color-first, $chic-color-second);
+            @include gradient;
             font-family: Lobster Two;
             font-weight: bold;
             }
     &__title2
     {
-         @include home-menu-font($color:$chic-color-first)
+         @include home-menu-font($color:$chic-color-first);
+         font-family: Lobster Two, Verdana, Geneva, Tahoma, sans-serif;
             }
     &:hover
         {   
          @include menu-zoom;
         }
     }
-.delice-block
-    {
-      @include grid-size($background:lighten($first-delice-color,40));
+.delice-block 
+    {  
+      @include grid-size($background:lighten($first-delice-color, 75));
     }
 .delice
 {
     @include menu-animation;
     &__title
     {
-        font-family: Parisienne;
+        font-family: Parisienne, Geneva, Verdana, sans-serif;
         font-style: italic;
         font-weight: bold;
-    }
+        background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    } 
     &__title2
     {
       @include home-menu-font($color:$second-delice-color)
@@ -89,16 +92,20 @@
 }
 .palette-block
    {
-      @include grid-size($background:lighten($palette-color,60));
+      @include grid-size($background:lighten($palette-color,75));
    }
 .palette
 {
     @include menu-animation;
     &__title{
+        background: -webkit-gradient(linear, left top, left top, from($palette-color), to($section-background));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
         font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
-    }
-    &__title2{
+    } 
+    &__title2{ 
         @include home-menu-font($color:$palette-color)
     }
     &:hover{

@@ -16,7 +16,7 @@
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        font-size: 1.5rem;
+        font-size: 2em;
     
   &__item
         {
@@ -43,15 +43,13 @@
           
 .title-note__mini{
   @include title__mini-size;
+
 }
 .title-delice__mini{
-  @include title__mini-size;
-}
-.title-chic__mini{
-  @include title__mini-size;
+  @include title__mini-size($color: $first-delice-color);
 }
 .title-palette__mini{
-  @include title__mini-size;
+  @include title__mini-size($color: $palette-color);
 }
 h1{
   text-align: center;

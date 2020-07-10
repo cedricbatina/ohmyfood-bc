@@ -1,9 +1,9 @@
 @mixin grid-size($background: $note-color)
 {   display: block;
-    box-shadow: 3px $shadow-color;
+    box-shadow: 1px 1px 1px 4px $shadow-color;
+    cursor: pointer;
     text-align: center;
     padding-top: 15rem;
-    cursor: pointer;
     padding-bottom: 10rem;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -19,6 +19,7 @@
 
 @mixin animation-point 
 {   
+    font-size: 2rem;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-name: animpoint;
@@ -58,21 +59,24 @@
      width: 80%;
      margin: auto;
  }
- @mixin title__mini-size {
+ @mixin title__mini-size($color:$note-color-text) {
     font-size: map-get($font-size, medium +.5rem);
     font-family: Caveat;
     font-style: italic;
     text-align: center;
-    padding-top: map-get($font-size, regular);
-    padding-bottom: map-get($font-size, regular);
-    border-bottom: 0rem solid $note-color-text;
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation-duration: 1000ms;
-    transform-origin: left;
-    &:hover{
-        transform: border-bottom scaleX(1);
-        border-bottom: 5px solid $note-color-text;
+    &::after{
+        display: block;
+        content:"";
+        border-bottom: solid 4.5px $color;
+        transform: scaleX(0);
+        transition: transform 750ms ease-in;
+        transform-origin: 0% 50%;
     }
+    &:hover:after{
+        transform: scaleX(1);
+    }
+
  }
 
  @mixin left-bar-size
@@ -87,13 +91,55 @@
     width: 20rem;
      
  }
+ 
  @mixin section-size {
     width: 80%;
     display: block;
-    box-shadow: $shadow-color;
-    margin: auto;
-    font-weight: 1.5rem;
-    padding-top: map-get($font-size, big + 6rem);
-    padding-bottom: map-get($font-size, medium);
+    box-shadow: 1px 1px 1px 4px $shadow-color;
+    margin-top: map-get($font-size, big);
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: map-get($font-size, medium);
+    font-weight: map-get($font-size, medium);
+    padding-top: map-get($font-size, big + 2rem);
+    padding-bottom: map-get($font-size, medium);
  }
+ @mixin chic-mini($color: $chic-color-first) {
+    font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem;
+    color: $color;
+ }
+ 
+
+
+ /*@keyframes underline {
+    from {left: 0px;
+    width:0%}
+    to {
+    width:100%;}
+  }
+  
+  @mixin underline($color:$note-color-text){
+    &::after{
+        content:"";
+        width:0%;
+        height:0.3rem;
+        background-color:$color;
+        position:absolute;
+        left:0rem;
+        bottom:0rem;
+        opacity:0.5;
+        border-radius:4rem;
+    }
+    &:hover {
+        &::after{
+           animation:underline 700ms forwards;
+        }   
+    }    
+  }*/
+  
+  @mixin gradient{
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

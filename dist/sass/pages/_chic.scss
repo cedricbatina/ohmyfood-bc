@@ -1,17 +1,50 @@
 .page-chic
 {
+    &__title{
+        font-size: map-get($font-size, big);
+    }
     &__section{
         @include section-size;
-        background-color: $section-background;
+        padding-top: 5rem;
+        background-color: lighten($section-background, 10);
 
     }
 }
+.title-chic{
+    /*background: -webkit-gradient(linear, left center, left bottom, from($chic-color-first), to($chic-color-second));*/
+    background: -webkit-linear-gradient(right, $chic-color-first, $chic-color-second);
+    @include gradient;
+    font-family: Lobster Two;
+    font-weight: bold;
+    font-size: map-get($font-size, bigger);
+}
+.title-chic__mini1{
+   @include chic-mini($color: $chic-color-first);
+   @include title__mini-size($color:$chic-color-first);
+}
+.title-chic__mini2{
+   @include chic-mini($color: $chic-color-third);
+   @include title__mini-size($color:$chic-color-third);
+}
+.title-chic__mini3{
+  @include chic-mini($color: $chic-color-second);
+  @include title__mini-size($color:$chic-color-second);
+
+}
+
+
 .menuchic1{
     color: $chic-color-first;
+    margin-bottom: map-get($font-size, medium);
+    font-size: 1.2rem;
 }
 .menuchic2{
-    color: $chic-color-second;
+    color: $chic-color-third;
+    margin-bottom: map-get($font-size, medium);
+    font-size: 1.2rem;
 }
 .menuchic3{
-    color: $palette-color;
+    color: $chic-color-second;
+    margin-bottom: map-get($font-size, medium);
+    font-size: 1.2rem;
 }

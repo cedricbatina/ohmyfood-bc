@@ -2,30 +2,41 @@
 
 .page-note
 {
-    &__section{
-      font-family: Caveat;
+    &__title{
+      font-size: map-get($font-size,bigger);
+    }
+    &__section{ 
+      font-family: Kalam;
+      color: $note-color-text;
+      padding-top: 5rem;
       background-color: $note-color;
       @include section-size;
     }
 }
 .title-note{
     font-family: Devonshire;
+    font-size: map-get($font-size, big);
 }
-
-
 p 
 { font-family: Devonshire;
     text-align: center;
     & > i{
+     /* background: -webkit-gradient(linear, left top, left bottom, from($icon-color), to($note-color));*/
+      background: -webkit-linear-gradient(right, #f04a5e, #f78f6a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    /*
     background: linear-gradient
         (
             to right,
             ($icon-color, 0.7),
             ($note-color, 0.3)
         );
-    }
+    }*/
 
-  }
+  } 
 .note-image-first-left{
     @include left-bar-size;
     margin-top: map-get($font-size, bigger);
@@ -34,3 +45,9 @@ p
     @include right-bar-size;
     margin-top: map-get($font-size, bigger);
 }
+/*
+      background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#ccc));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+*/

@@ -1,13 +1,23 @@
 
 .page-delice{
+    &__title{
+        font-size: map-get($font-size,bigger);
+    }
     &__section{
     font-family: Kalam, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
     background-color: lighten($first-delice-color,50);
+    padding-top: 5rem;
     @include section-size; 
     }
+
 .title-delice{
-    font-family: Parisienne, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: map-get($font-size, bigger);
+    font-family: Parisienne, Geneva, Verdana, sans-serif;
     font-style: italic;
-    font-size: 3rem;
-}
+    font-weight: bold;
+    background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    }
 }

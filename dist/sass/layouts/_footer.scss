@@ -44,13 +44,13 @@ footer{
         transform: translateY($shake-intensity * -2);
     }
     60%{
-        transform: translateX($shake-intensity * 1.5);
+        transform: translateX($shake-intensity * 1);
     }
     80%{
         transform: translateX($shake-intensity * -1);
     }
     100%{
-        transform: translateY($shake-intensity * 3);
+        transform: translateY($shake-intensity * 2);
     }
 }
     

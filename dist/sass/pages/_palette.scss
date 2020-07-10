@@ -1,11 +1,35 @@
 .page-palette{
+    &__title{
+        font-size: map-get($font-size,big);
+    }
     &__section{
+        padding-top: 5rem;
         @include section-size;
     }
 }
 .title-palette{
     font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: map-get($font-size, bigger);
+    /*background: -webkit-gradient(linear, left top, left top, from($palette-color), to($section-background));*/
+    background: -webkit-linear-gradient(left, $palette-color, $section-background);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+
+
+
+
+ 
+
+   /* background: -webkit-gradient(linear, left top, left bottom, from($palette-color), to lighten($note-color, 25));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;*/
 }
+
 .menupalette{
     font-family: Kalam, Verdana, Geneva, Tahoma, sans-serif;
 }
