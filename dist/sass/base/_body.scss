@@ -1,14 +1,20 @@
 #container
     {
-    border-right: 0.3px solid darken($note-color, 70);
-    border-left: 0.3px solid darken($note-color, 70);
+    @media screen and (min-width:1024px) {
     width: auto;
     margin: auto;
     display: flex; 
     flex-direction: column;
-    flex-wrap: nowrap;    
-    font-size: map-get($font-size, medium - 0.5rem);
-      
+    flex-wrap: wrap;  
+    }  
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+      display: flex;
+      flex-direction: column;
+    }
+    @media screen and (max-width: 780px){
+      display: flex;
+      flex-direction: column;
+    }
     }
 
 .menu
@@ -40,13 +46,8 @@
   justify-content: space-around;
   align-items: center;
 }  
-          
 .title-note__mini{
   @include title__mini-size;
-
-}
-.title-delice__mini{
-  @include title__mini-size($color: $first-delice-color);
 }
 .title-palette__mini{
   @include title__mini-size($color: $palette-color);

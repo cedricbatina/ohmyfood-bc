@@ -1,7 +1,7 @@
 .page-chic
 {
     &__title{
-        font-size: map-get($font-size, big);
+        font-size: map-get($font-size, bigger);
     }
     &__section{
         @include section-size;
@@ -36,15 +36,15 @@
 .menuchic1{
     color: $chic-color-first;
     margin-bottom: map-get($font-size, medium);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .menuchic2{
     color: $chic-color-third;
     margin-bottom: map-get($font-size, medium);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .menuchic3{
     color: $chic-color-second;
     margin-bottom: map-get($font-size, medium);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }

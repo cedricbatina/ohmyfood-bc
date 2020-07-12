@@ -1,29 +1,44 @@
 footer{
     font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Geneva, Verdana, sans-serif;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     height: 4rem;
     background-color: $first-color;
     color: $second-color;    
-    font-size: map-get($font-size, medium); 
+    font-size: map-get($font-size, medium - 0.10rem); 
     font-weight: bold;
     align-items: center;
     position: sticky;
     bottom: 0px;
+    @media screen and (min-width) and (max-width: 1024px){
+        display: flex;
+        flex-direction: row nowrap ;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media screen and (max-width: 780px){
+        display: flex;
+        flex-direction: row nowrap ;
+        justify-content: space-between;
+        align-items: center;
+        justify-items: center;
+        align-content: center;
+    }
+
     & > .mentions{
         text-align: left;
-        padding-left: 1rem;
+        padding-left: 1.2rem;
         color: $second-color;
         &:hover{
         @include shaking;
         }
-    }
+    } 
     & > .contact{
     text-align: right;
     color: $second-color;
-    padding-right: 1rem;
+    padding-right: 1.2rem;
     &:hover{
         @include shaking;
     }
@@ -34,23 +49,23 @@ footer{
         transform: translateX($shake-intensity);
     }
     20%{
-        transform: translateY($shake-intensity * -1);
+        transform: translateY($shake-intensity * 0.5);
 
     }
     40%{
-        transform: translateX($shake-intensity * -1);
+        transform: translateX($shake-intensity * 0.5);
     }
     50%{
-        transform: translateY($shake-intensity * -2);
+        transform: translateY($shake-intensity * -0.5);
     }
     60%{
-        transform: translateX($shake-intensity * 1);
+        transform: translateX($shake-intensity * 0.5);
     }
     80%{
-        transform: translateX($shake-intensity * -1);
+        transform: translateX($shake-intensity * -0.5);
     }
     100%{
-        transform: translateY($shake-intensity * 2);
+        transform: translateY($shake-intensity * 0.5);
     }
 }
     

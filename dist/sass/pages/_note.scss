@@ -19,10 +19,11 @@
 }
 p 
 { font-family: Devonshire;
-    text-align: center;
+  text-align: center;
+  font-size: 2rem;
     & > i{
      /* background: -webkit-gradient(linear, left top, left bottom, from($icon-color), to($note-color));*/
-      background: -webkit-linear-gradient(right, #f04a5e, #f78f6a);
+      background: -webkit-linear-gradient(left, #f04a5e, #f78f6a);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -37,6 +38,13 @@ p
     }*/
 
   } 
+  .title-note__mini1{
+    @include title__mini-size;
+    padding-top: 4rem;
+  }
+  .title-note__mini{
+    @include title__mini-size;
+  }
 .note-image-first-left{
     @include left-bar-size;
     margin-top: map-get($font-size, bigger);

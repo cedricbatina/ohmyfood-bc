@@ -9,19 +9,32 @@
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+        display: flex;
+        flex-direction: column;
+        flex-flow: wrap;
+    }
+    @media screen and (max-width: 780px){
+        display: flex;
+        flex-direction: column;
+    }
      }
 
 .note-block
 {
-@include grid-size($background:$note-color)
+@include grid-size($background:$note-color);
 }
 .note
 {  
     @include menu-animation; 
         & i:before 
         {
-            background: linear-gradient(to left, $icon-color, $note-color, $icon-color, $note-color);
+            /*background: linear-gradient(to left, $icon-color, $note-color, $icon-color, $note-color);
+            background-clip: text;*/
+            background: -webkit-linear-gradient(left, #f04a5e, #f78f6a);
+            -webkit-background-clip: text;
             background-clip: text;
+            -webkit-text-fill-color: transparent;
             
         }
         &__title
@@ -43,6 +56,7 @@
 .chic-block
  { 
     @include grid-size($background:lighten($chic-color-second,85));
+    width: $width;
  }
 .chic{
     @include menu-animation;
@@ -67,6 +81,8 @@
 .delice-block 
     {  
       @include grid-size($background:lighten($first-delice-color, 75));
+      width: $width;
+
     }
 .delice
 {
@@ -76,10 +92,11 @@
         font-family: Parisienne, Geneva, Verdana, sans-serif;
         font-style: italic;
         font-weight: bold;
-        background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+       /* background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));*/
+        background: -webkit-linear-gradient(left, $chic-color-second, $second-delice-color);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     } 
     &__title2
     {
@@ -92,13 +109,16 @@
 }
 .palette-block
    {
-      @include grid-size($background:lighten($palette-color,75));
+    @include grid-size($background:lighten($palette-color,75));
+    width: $width;
+
    }
 .palette
 {
     @include menu-animation;
     &__title{
-        background: -webkit-gradient(linear, left top, left top, from($palette-color), to($section-background));
+       /* background: -webkit-gradient(linear, left top, left top, from($palette-color), to($section-background));*/
+        background: -webkit-linear-gradient(left, $palette-color, $section-background);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;

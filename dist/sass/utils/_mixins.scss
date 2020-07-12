@@ -1,6 +1,7 @@
 @mixin grid-size($background: $note-color)
-{   display: block;
-    box-shadow: 1px 1px 1px 4px $shadow-color;
+{   
+    display: block;
+    box-shadow: 3px 4px 6px 4px $shadow-color;
     cursor: pointer;
     text-align: center;
     padding-top: 15rem;
@@ -8,12 +9,25 @@
     padding-left: 5rem;
     padding-right: 5rem;
     text-decoration: none;
-    width: 25%;
     height: 15rem;
     margin: 1rem 1rem 1rem 1rem;
     font-weight: 1.5rem;
     font-size: 1.8rem;
     background-color: $background;
+    width: $width;
+    @media screen and (min-width: 768px) and (max-width:1024px){
+        width: $width * 2;
+    }
+    @media screen and (max-width: 768px){
+        width: ($width * 2) + 10rem;
+        margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+        padding-top: 5rem;
+    padding-bottom: 10rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    height: 10rem;
+    }
+
 }
 
 
@@ -95,7 +109,6 @@
  @mixin section-size {
     width: 80%;
     display: block;
-    box-shadow: 1px 1px 1px 4px $shadow-color;
     margin-top: map-get($font-size, big);
     margin-left: auto;
     margin-right: auto;
@@ -106,7 +119,7 @@
  }
  @mixin chic-mini($color: $chic-color-first) {
     font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: $color;
  }
  

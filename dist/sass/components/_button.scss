@@ -17,6 +17,10 @@ span{
     text-align: center;
     padding: 0rem 3rem 1rem 3rem;
     font-size: 2rem;
+    @media screen and (max-width:1024px){
+    width: auto;
+    }
+
     & > .point1{
     transform: scale(2);
     animation-duration: 1200ms;
@@ -33,7 +37,7 @@ span{
     & > .point3{
         transform: scale(2);
         animation-delay: 300ms;
-        animation-duration: 1200ms;
+        animation-duration: 1300ms;
         @include animation-point;
     }
 }

@@ -15,9 +15,19 @@
     font-family: Parisienne, Geneva, Verdana, sans-serif;
     font-style: italic;
     font-weight: bold;
-    background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));
+    /*background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));*/
+    background: -webkit-linear-gradient(left, $chic-color-second, $second-delice-color);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     }
+}
+.title-delice__mini1{
+    @include title__mini-size($color: $chic-color-second);
+  }
+.title-delice__mini2{
+    @include title__mini-size($color:$first-delice-color);
+}
+.title-delice__mini3{
+    @include title__mini-size($color:$second-delice-color);
 }
