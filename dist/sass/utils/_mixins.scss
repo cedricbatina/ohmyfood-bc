@@ -40,6 +40,7 @@
     animation-name: animpoint;
     animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+
 @mixin menu-animation 
 {
     transform: scale(1);
@@ -47,15 +48,14 @@
     transition-timing-function: ease-in-out;
     transition-delay: 100ms;
 }
-@mixin home-menu-font($color:$note-color-text)
-{
+
+@mixin home-menu-font($color:$note-color-text){
  font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
  text-transform: uppercase;
  color: $color;
  }
 
- @mixin shaking 
- {
+ @mixin shaking{
      animation-name: shake;
      animation-duration: 1000ms;
      animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
