@@ -3,7 +3,7 @@
 .page-note
 {
     &__title{
-      font-size: map-get($font-size,bigger);
+      font-size: map-get($font-size, big);
     }
     &__section{ 
       font-family: Kalam;
@@ -22,21 +22,11 @@ p
   text-align: center;
   font-size: 2rem;
     & > i{
-     /* background: -webkit-gradient(linear, left top, left bottom, from($icon-color), to($note-color));*/
       background: -webkit-linear-gradient(left, #f04a5e, #f78f6a);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-    /*
-    background: linear-gradient
-        (
-            to right,
-            ($icon-color, 0.7),
-            ($note-color, 0.3)
-        );
-    }*/
-
   } 
   .title-note__mini1{
     @include title__mini-size;
@@ -48,14 +38,9 @@ p
 .note-image-first-left{
     @include left-bar-size;
     margin-top: map-get($font-size, bigger);
-  }
+}
 .note-image-first-right{
     @include right-bar-size;
     margin-top: map-get($font-size, bigger);
-}
-/*
-      background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#ccc));
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-*/
+    }
+

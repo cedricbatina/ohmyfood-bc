@@ -19,7 +19,6 @@
         flex-direction: column;
     }
      }
-
 .note-block
 {
 @include grid-size($background:$note-color);
@@ -29,13 +28,11 @@
     @include menu-animation; 
         & i:before 
         {
-            /*background: linear-gradient(to left, $icon-color, $note-color, $icon-color, $note-color);
-            background-clip: text;*/
+            background-clip: text;
             background: -webkit-linear-gradient(left, #f04a5e, #f78f6a);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            
         }
         &__title
         {
@@ -45,14 +42,13 @@
         }
         &__title2
         {
-         @include home-menu-font
+          @include home-menu-font;
         }
         &:hover
         {
-          @include menu-zoom
+          @include menu-zoom;
         }
      }
-
 .chic-block
  { 
     @include grid-size($background:lighten($chic-color-second,85));
@@ -62,7 +58,6 @@
     @include menu-animation;
     &__title
         {   
-            /*background: -webkit-gradient(linear, left center, left bottom, from($chic-color-first), to($chic-color-second));*/
             background: -webkit-linear-gradient(right, $chic-color-first, $chic-color-second);
             @include gradient;
             font-family: Lobster Two;
@@ -82,7 +77,6 @@
     {  
       @include grid-size($background:lighten($first-delice-color, 75));
       width: $width;
-
     }
 .delice
 {
@@ -92,7 +86,6 @@
         font-family: Parisienne, Geneva, Verdana, sans-serif;
         font-style: italic;
         font-weight: bold;
-       /* background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));*/
         background: -webkit-linear-gradient(left, $chic-color-second, $second-delice-color);
         -webkit-background-clip: text;
         background-clip: text;
@@ -111,13 +104,11 @@
    {
     @include grid-size($background:lighten($palette-color,75));
     width: $width;
-
    }
 .palette
 {
     @include menu-animation;
     &__title{
-       /* background: -webkit-gradient(linear, left top, left top, from($palette-color), to($section-background));*/
         background: -webkit-linear-gradient(left, $palette-color, $section-background);
         -webkit-background-clip: text;
         background-clip: text;

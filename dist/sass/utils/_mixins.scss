@@ -19,18 +19,18 @@
         width: $width * 2;
     }
     @media screen and (max-width: 768px){
-        width: ($width * 2) + 10rem;
+        width: ($width * 3) - 15%;
         margin: 0.5rem 0.5rem 0.5rem 0.5rem;
         padding-top: 5rem;
-    padding-bottom: 10rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    height: 10rem;
+        padding-bottom: 10rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        height: 10rem;
+        font-size: 1.3rem;
+        font-weight: 1.2rem;
     }
 
 }
-
-
 @mixin animation-point 
 {   
     font-size: 2rem;
@@ -92,66 +92,43 @@
     }
 
  }
-
- @mixin left-bar-size
- {
+ @mixin left-bar-size{
     height: map-get($font-size,big);
     float: left;
     width: 20rem;
- }
+    }
  @mixin right-bar-size {
     height: map-get($font-size,big);
     float: right;
     width: 20rem;
-     
  }
- 
- @mixin section-size {
+ @mixin section-size{
     width: 80%;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin-top: map-get($font-size, big);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: map-get($font-size, medium);
     font-weight: map-get($font-size, medium);
     padding-top: map-get($font-size, big + 2rem);
     padding-bottom: map-get($font-size, medium);
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+        width: 95%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    @media screen and (max-width: 768px){
+        width: 95%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
  }
- @mixin chic-mini($color: $chic-color-first) {
+ @mixin chic-mini($color: $chic-color-first){
     font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 2rem;
     color: $color;
  }
- 
-
-
- /*@keyframes underline {
-    from {left: 0px;
-    width:0%}
-    to {
-    width:100%;}
-  }
-  
-  @mixin underline($color:$note-color-text){
-    &::after{
-        content:"";
-        width:0%;
-        height:0.3rem;
-        background-color:$color;
-        position:absolute;
-        left:0rem;
-        bottom:0rem;
-        opacity:0.5;
-        border-radius:4rem;
-    }
-    &:hover {
-        &::after{
-           animation:underline 700ms forwards;
-        }   
-    }    
-  }*/
-  
-  @mixin gradient{
+ @mixin gradient{
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

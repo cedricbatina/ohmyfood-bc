@@ -1,7 +1,7 @@
 .page-chic
 {
     &__title{
-        font-size: map-get($font-size, bigger);
+        font-size: map-get($font-size, big);
     }
     &__section{
         @include section-size;
