@@ -1,5 +1,6 @@
-@mixin grid-size($background: $note-color)
-{   
+ 
+
+ @mixin grid-size($background: $note-color){   
     display: block;
     box-shadow: 3px 4px 6px 4px $shadow-color;
     cursor: pointer;
@@ -39,7 +40,6 @@
     animation-name: animpoint;
     animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
 @mixin menu-animation 
 {
     transform: scale(1);
@@ -47,7 +47,6 @@
     transition-timing-function: ease-in-out;
     transition-delay: 100ms;
 }
-
 @mixin home-menu-font($color:$note-color-text)
 {
  font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
