@@ -6,20 +6,20 @@ footer{
     align-items: center;
     height: 4rem;
     background-color: $first-color;
-    color: $second-color;    
+    color: $second-color;
     font-size: map-get($font-size, medium - 0.10rem); 
     font-weight: bold;
     align-items: center;
     position: fixed;
     width: 100%;
     bottom: 0px;
-    @media screen and (min-width) and (max-width: 1024px){
+    @media screen and (min-width: 768px) and (max-width: 1024px){
         display: flex;
         flex-direction: row nowrap ;
         justify-content: space-between;
         align-items: center;
     }
-    @media screen and (max-width: 780px){
+    @media screen and (max-width: 768px){
         display: flex;
         flex-direction: row nowrap ;
         justify-content: space-between;
@@ -27,8 +27,7 @@ footer{
         justify-items: center;
         align-content: center;
         margin-top: 2rem;
-        font-size: map-get($font-size, medium);
-
+        font-size: map-get($font-size, medium -0.9rem);
     }
     & > .mentions{
         text-align: left;
@@ -53,7 +52,6 @@ footer{
     }
     20%{
         transform: translateY($shake-intensity * 0.5);
-
     }
     40%{
         transform: translateX($shake-intensity * 0.5);

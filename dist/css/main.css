@@ -3,51 +3,8 @@
 -webkit-background-clip: text,
 background-clip: text,
 -webkit-text-fill-color: transparent);*/
-@media screen and (min-width: 780px) and (max-width: 1024px) {
-  /*header{
-    height: 4rem;
-    background-color: $first-color;
-    color: $second-color;
-    text-align: center;   
-    padding: auto;
-    font-size: map-get($font-size, medium);
-    display: block;
-    font-weight: bold;
- }
- footer{
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
-     position: sticky;
-     bottom: 0px;
- }
- .grid{
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     align-content: center;
-     margin-top: 1rem;
-     margin-bottom: 1rem;
-     margin-left: 5%;
-     margin-right: 5%;
-     width: 90%;
- }
- .note-block{
-     width: $width * 2;
- }
- .chic-block{
-     width: $width * 2;
- }
-.delice-block{
-    width: $width * 2;
-}
-.palette-block{
-    width: $width * 2;
-}
-}
-}*/
+body {
+  margin: unset;
 }
 
 @media screen and (min-width: 1024px) {
@@ -377,7 +334,7 @@ footer {
   bottom: 0px;
 }
 
-@media screen and (min-width) and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -395,7 +352,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 768px) {
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -414,7 +371,6 @@ footer {
     -ms-flex-line-pack: center;
         align-content: center;
     margin-top: 2rem;
-    font-size: 2rem;
   }
 }
 
@@ -526,27 +482,43 @@ footer > .contact:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+  width: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  margin-left: 10%;
-  margin-right: 10%;
-  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notechic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .grid {
+  .notechic {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -554,13 +526,51 @@ footer > .contact:hover {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-flex-flow: wrap;
-        flex-flow: wrap;
   }
 }
 
-@media screen and (max-width: 780px) {
-  .grid {
+@media screen and (max-width: 768px) {
+  .notechic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.delicepalette {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .delicepalette {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-flow: nowrap;
+        flex-flow: nowrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .delicepalette {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -583,11 +593,11 @@ footer > .contact:hover {
   padding-right: 5rem;
   text-decoration: none;
   height: 15rem;
-  margin: 1rem 1rem 1rem 1rem;
+  /* margin: 1rem 1rem 1rem 1rem;*/
   font-weight: 1.5rem;
   font-size: 1.8rem;
   background-color: #ffcdd2;
-  width: 25%;
+  width: 50%;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -659,11 +669,11 @@ footer > .contact:hover {
   padding-right: 5rem;
   text-decoration: none;
   height: 15rem;
-  margin: 1rem 1rem 1rem 1rem;
+  /* margin: 1rem 1rem 1rem 1rem;*/
   font-weight: 1.5rem;
   font-size: 1.8rem;
-  background-color: white;
-  width: 25%;
+  background-color: #fbfafe;
+  width: 50%;
   width: 25%;
 }
 
@@ -732,11 +742,11 @@ footer > .contact:hover {
   padding-right: 5rem;
   text-decoration: none;
   height: 15rem;
-  margin: 1rem 1rem 1rem 1rem;
+  /* margin: 1rem 1rem 1rem 1rem;*/
   font-weight: 1.5rem;
   font-size: 1.8rem;
   background-color: white;
-  width: 25%;
+  width: 50%;
   width: 25%;
 }
 
@@ -805,11 +815,11 @@ footer > .contact:hover {
   padding-right: 5rem;
   text-decoration: none;
   height: 15rem;
-  margin: 1rem 1rem 1rem 1rem;
+  /* margin: 1rem 1rem 1rem 1rem;*/
   font-weight: 1.5rem;
   font-size: 1.8rem;
-  background-color: white;
-  width: 25%;
+  background-color: #fafdfa;
+  width: 50%;
   width: 25%;
 }
 
