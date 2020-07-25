@@ -5,9 +5,9 @@
     }
     &__section{
         @include section-size;
-        padding-top: 5rem;
-        background-color: lighten($section-background, 10);
-
+        background-color: lighten($chic-color-first, 50);
+        box-shadow: 3px 4px 6px 4px $shadow-color;
+ 
     }
 }
 .title-chic{
@@ -17,6 +17,7 @@
     font-family: Lobster Two;
     font-weight: bold;
     font-size: map-get($font-size, bigger);
+    text-align: center;
 }
 .title-chic__mini1{
    @include chic-mini($color: $chic-color-first);
@@ -36,15 +37,15 @@
 .menuchic1{
     color: $chic-color-first;
     margin-bottom: map-get($font-size, medium);
-    font-size: 1rem;
+    font-size: 1em;
 }
 .menuchic2{
     color: $chic-color-third;
     margin-bottom: map-get($font-size, medium);
-    font-size: 1rem;
+    font-size: 1em;
 }
 .menuchic3{
     color: $chic-color-second;
     margin-bottom: map-get($font-size, medium);
-    font-size: 1rem;
+    font-size: 1em;
 }

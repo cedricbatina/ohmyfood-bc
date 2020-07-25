@@ -14,9 +14,10 @@
 }
 .notechic{
     display: flex; 
-    flex-direction: row;
-    width: 100%;
+    flex-flow: row nowrap;
+    width: 89%;
     justify-content: center;
+    align-items: center;
     @media screen and (min-width: 768px) and (max-width: 1024px){
         display: flex;
         flex-direction: column;
@@ -28,13 +29,13 @@
 } 
 .delicepalette{
     display: flex;
-    flex-direction: row;
-    width: 100%;
+    flex-flow: row nowrap;
+    width: 89%;
     justify-content: center;
+    align-items: center;
     @media screen and (min-width: 768px) and (max-width: 1024px){
         display: flex;
         flex-direction: column;
-        flex-flow: nowrap;
     }
     @media screen and (max-width: 768px){
         display: flex;
@@ -43,6 +44,7 @@
 }
 .note-block{
 @include grid-size($background: $note-color);
+margin-right: 1%;
 }
 .note{  
     @include menu-animation; 
@@ -71,8 +73,7 @@
      }
 .chic-block
  { 
-    @include grid-size($background:lighten($chic-color-second,65));
-    width: $width;
+    @include grid-size($background:lighten($chic-color-first,50));
  }
 .chic{
     @include menu-animation;
@@ -93,8 +94,8 @@
     }
 .delice-block 
     {  
-      @include grid-size($background:lighten($first-delice-color, 65));
-      width: $width;
+      @include grid-size($background:lighten($first-delice-color, 40));
+      margin-right: 1%;
     }
 .delice
 {
@@ -120,8 +121,7 @@
 }
 .palette-block
    {
-    @include grid-size($background:lighten($palette-color,65));
-    width: $width;
+    @include grid-size($background:$section-background);
    }
 .palette
 {
