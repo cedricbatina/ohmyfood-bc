@@ -1,5 +1,4 @@
- 
-
+/* tous les mixins*/ 
  @mixin grid-size($background: $note-color){   
     display: block;
     box-shadow: 3px 4px 6px 4px $shadow-color;
@@ -10,7 +9,7 @@
     padding-left: 5rem;
     padding-right: 5rem;
     text-decoration: none;
-    height: 15rem;
+    height: 25rem;
     margin: 1rem 1rem 1rem 1rem;
     font-weight: 2em;
     font-size: 2em;
@@ -50,8 +49,8 @@
  font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
  text-transform: uppercase;
  color: $color;
+ font-size: 1.5em; 
  }
-
  @mixin shaking{
      animation-name: shake;
      animation-duration: 1000ms;

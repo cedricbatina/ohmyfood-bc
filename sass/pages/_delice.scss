@@ -1,4 +1,4 @@
-
+/* code pour la page html delice*/
 .page-delice{
     &__title{
         font-size: map-get($font-size,big);
@@ -11,7 +11,7 @@
     }
 
 .title-delice{
-    font-size: map-get($font-size, bigger);
+    font-size: map-get($font-size, big);
     font-family: Parisienne, Geneva, Verdana, sans-serif;
     font-style: italic;
     font-weight: bold;

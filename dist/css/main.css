@@ -1,8 +1,13 @@
+@charset "UTF-8";
+/* import pour les mixins*/
+/*toutes les variables des couleurs*/
+/* tous les mixins*/
 /* $gradient:
 (background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color)),
 -webkit-background-clip: text,
 background-clip: text,
 -webkit-text-fill-color: transparent);*/
+/* code généraral pour le body comprenant*/
 body {
   margin: unset;
 }
@@ -188,6 +193,7 @@ a {
   text-decoration: none;
 }
 
+/* code pour la section prochainement comprenant le bouton*/
 .prochainement {
   text-align: center;
   margin-bottom: 7%;
@@ -603,7 +609,7 @@ footer > .contact:hover {
   padding-left: 5rem;
   padding-right: 5rem;
   text-decoration: none;
-  height: 15rem;
+  height: 25rem;
   margin: 1rem 1rem 1rem 1rem;
   font-weight: 2em;
   font-size: 2em;
@@ -661,6 +667,8 @@ footer > .contact:hover {
   font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   color: #4e342e;
+  font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .note:hover {
@@ -680,7 +688,7 @@ footer > .contact:hover {
   padding-left: 5rem;
   padding-right: 5rem;
   text-decoration: none;
-  height: 15rem;
+  height: 25rem;
   margin: 1rem 1rem 1rem 1rem;
   font-weight: 2em;
   font-size: 2em;
@@ -732,7 +740,9 @@ footer > .contact:hover {
   font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   color: #e65100;
+  font-size: 1.5em;
   font-family: Lobster Two, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5em;
 }
 
 .chic:hover {
@@ -752,7 +762,7 @@ footer > .contact:hover {
   padding-left: 5rem;
   padding-right: 5rem;
   text-decoration: none;
-  height: 15rem;
+  height: 25rem;
   margin: 1rem 1rem 1rem 1rem;
   font-weight: 2em;
   font-size: 2em;
@@ -806,6 +816,8 @@ footer > .contact:hover {
   font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   color: #03a9f4;
+  font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .delice:hover {
@@ -825,7 +837,7 @@ footer > .contact:hover {
   padding-left: 5rem;
   padding-right: 5rem;
   text-decoration: none;
-  height: 15rem;
+  height: 25rem;
   margin: 1rem 1rem 1rem 1rem;
   font-weight: 2em;
   font-size: 2em;
@@ -877,6 +889,8 @@ footer > .contact:hover {
   font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   color: #2e7d32;
+  font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 .palette:hover {
@@ -885,6 +899,7 @@ footer > .contact:hover {
   opacity: 0.6;
 }
 
+/*code css pour page html note*/
 .page-note__title {
   font-size: 3em;
 }
@@ -1014,6 +1029,7 @@ p > i {
   margin-top: 4em;
 }
 
+/* code pour la page html delice*/
 .page-delice__title {
   font-size: 3em;
 }
@@ -1056,7 +1072,7 @@ p > i {
 }
 
 .page-delice .title-delice {
-  font-size: 4em;
+  font-size: 3em;
   font-family: Parisienne, Geneva, Verdana, sans-serif;
   font-style: italic;
   font-weight: bold;
@@ -1149,6 +1165,7 @@ p > i {
           transform: scaleX(1);
 }
 
+/*code pour la page html chic*/
 .page-chic__title {
   font-size: 3em;
 }
@@ -1197,7 +1214,7 @@ p > i {
   -webkit-text-fill-color: transparent;
   font-family: Lobster Two;
   font-weight: bold;
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
 }
 
@@ -1309,6 +1326,7 @@ p > i {
   font-size: 1em;
 }
 
+/* code de la page html palette*/
 .page-palette__title {
   font-size: 3em;
 }
@@ -1351,7 +1369,7 @@ p > i {
 
 .title-palette {
   font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 4em;
+  font-size: 3em;
   background: -webkit-linear-gradient(left, #2e7d32, #eeeeee);
   -webkit-background-clip: text;
   background-clip: text;
@@ -1365,6 +1383,7 @@ p > i {
   font-family: Kalam, Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* code pour page html mentions*/
 .mentions-contact {
   width: 80%;
   margin-top: 2rem;
