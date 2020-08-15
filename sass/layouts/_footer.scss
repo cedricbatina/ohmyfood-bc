@@ -7,7 +7,7 @@ footer{
     height: 4rem;
     background-color: $first-color;
     color: $second-color;
-    font-size: map-get($font-size, medium - 0.10rem); 
+    font-size: map-get($font-size, medium - 0.10em); 
     font-weight: bold;
     align-items: center;
     position: fixed;
@@ -28,7 +28,7 @@ footer{
         justify-items: center;
         align-content: center;
         margin-top: 2rem;
-        font-size: map-get($font-size, medium -0.9rem);
+        font-size: map-get($font-size, medium -0.9em);
     }
     & > .mentions{
         text-align: left;
