@@ -52,13 +52,6 @@ margin-right: 1%;
         {
             background: -webkit-linear-gradient(left, $icon-color,#f78f6a);
             @include gradient;
-           /* -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-             background: -webkit-linear-gradient(right, #f04a5e, #f78f6a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;*/
-            
         }
         &__title
         {

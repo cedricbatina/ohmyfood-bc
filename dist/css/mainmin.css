@@ -538,13 +538,7 @@ footer {
     background-clip: text;
     -webkit-text-fill-color: transparent;*/
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-             background: -webkit-linear-gradient(right, #f04a5e, #f78f6a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;*/ }
+    -webkit-text-fill-color: transparent; }
   .note__title {
     color: #3c1218;
     font-family: Devonshire, Arial, Helvetica, sans-serif;
