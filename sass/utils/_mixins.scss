@@ -11,7 +11,7 @@
     text-decoration: none;
     height: 25rem;
     margin: 1rem 1rem 1rem 1rem;
-    font-weight: 2em;
+    font-weight: bold;
     font-size: 2em;
     background-color: $background;
     width: $width + 15%;
@@ -27,12 +27,12 @@
         padding-right: 5rem;
         height: 10rem; 
         font-size: 1.2em;
-        font-weight: 1.2em;
+        font-weight: bold;
     }
 }
 @mixin animation-point 
 {    
-    font-size: 2rem;
+    font-size: 2em;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
     animation-name: animpoint;
@@ -69,7 +69,7 @@
      margin: auto;
  }
  @mixin title__mini-size($color:$note-color-text) {
-    font-size: map-get($font-size, medium +.5rem);
+    font-size: map-get($font-size, medium +.5em);
     font-family: Caveat;
     font-style: italic;
     text-align: center;
@@ -103,28 +103,26 @@
     margin-top: map-get($font-size, big);
     margin-left: auto;
     margin-right: auto;
-    font-weight: map-get($font-size, medium);
+    font-weight: bold;
     padding-top: map-get($font-size, big + 2em);
     padding-bottom: map-get($font-size, medium);
     box-shadow: 3px 4px 6px 4px $shadow-color;
     @media screen and (min-width: 768px) and (max-width: 1024px){
         width: 95%;
-        margin-left: 1rem;
-        margin-right: 1rem;
     }
     @media screen and (max-width: 768px){
-        width: 95%;
-        margin-left: 1rem;
-        margin-right: 1rem;
+        width: 90%;
     }
  }
  @mixin chic-mini($color: $chic-color-first){
     font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2rem;
+    font-size: 2em;
     color: $color;
  }
  @mixin gradient{
-    -webkit-background-clip: text;
+   /* -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

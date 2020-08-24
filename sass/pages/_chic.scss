@@ -10,8 +10,7 @@
     }
 }
 .title-chic{
-    /*background: -webkit-gradient(linear, left center, left bottom, from($chic-color-first), to($chic-color-second));*/
-    background: -webkit-linear-gradient(right, $chic-color-first, $chic-color-second);
+    background: -webkit-linear-gradient(right, $chic-color-second, $chic-color-first);
     @include gradient;
     font-family: Lobster Two;
     font-weight: bold;

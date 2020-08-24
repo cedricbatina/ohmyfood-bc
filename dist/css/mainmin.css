@@ -45,7 +45,7 @@ body {
   img {
     width: 15rem; } }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   img {
     visibility: hidden; } }
 
@@ -175,19 +175,19 @@ span {
   background-color: #579c87;
   color: #fdcb46;
   padding: 1rem 1rem 1rem 1rem;
-  height: 3rem;
+  height: auto;
   text-align: center;
   padding: 0rem 3rem 1rem 3rem;
   font-size: 2em; }
   @media screen and (max-width: 768px) {
     .prochainement__btn {
-      font-size: 1.5em; } }
+      font-size: 1em; } }
   .prochainement__btn > .point1 {
     -webkit-transform: scale(2);
             transform: scale(2);
     -webkit-animation-duration: 1200ms;
             animation-duration: 1200ms;
-    font-size: 2rem;
+    font-size: 2em;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
     -webkit-animation-iteration-count: infinite;
@@ -203,7 +203,7 @@ span {
             animation-delay: 200ms;
     -webkit-animation-duration: 1200ms;
             animation-duration: 1200ms;
-    font-size: 2rem;
+    font-size: 2em;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
     -webkit-animation-iteration-count: infinite;
@@ -219,7 +219,7 @@ span {
             animation-delay: 300ms;
     -webkit-animation-duration: 1300ms;
             animation-duration: 1300ms;
-    font-size: 2rem;
+    font-size: 2em;
     -webkit-animation-fill-mode: both;
             animation-fill-mode: both;
     -webkit-animation-iteration-count: infinite;
@@ -255,7 +255,7 @@ header {
   font-size: 2em;
   display: block;
   font-weight: bold;
-  width: auto; }
+  width: 100%; }
 
 footer {
   font-family: 'Montserrat', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Geneva, Verdana, sans-serif;
@@ -280,7 +280,8 @@ footer {
   position: fixed;
   width: 100%;
   bottom: 0px;
-  margin-top: 2rem; }
+  margin-top: 2rem;
+  font-size: 2em; }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     footer {
       display: -webkit-box;
@@ -288,8 +289,8 @@ footer {
       display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: row nowrap;
-              flex-direction: row nowrap;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
@@ -303,8 +304,8 @@ footer {
       display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-          -ms-flex-direction: row nowrap;
-              flex-direction: row nowrap;
+          -ms-flex-flow: row nowrap;
+              flex-flow: row nowrap;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
               justify-content: space-between;
@@ -314,7 +315,8 @@ footer {
       justify-items: center;
       -ms-flex-line-pack: center;
           align-content: center;
-      margin-top: 2rem; } }
+      margin-top: 2rem;
+      font-size: 1em; } }
   footer > .mentions {
     text-align: left;
     padding-left: 1.2rem;
@@ -501,7 +503,7 @@ footer {
   text-decoration: none;
   height: 25rem;
   margin: 1rem 1rem 1rem 1rem;
-  font-weight: 2em;
+  font-weight: bold;
   font-size: 2em;
   background-color: #fcdfdb;
   width: 40%;
@@ -519,7 +521,7 @@ footer {
       padding-right: 5rem;
       height: 10rem;
       font-size: 1.2em;
-      font-weight: 1.2em; } }
+      font-weight: bold; } }
 
 .note {
   -webkit-transform: scale(1);
@@ -531,11 +533,18 @@ footer {
   -webkit-transition-delay: 100ms;
           transition-delay: 100ms; }
   .note i:before {
-    background-clip: text;
     background: -webkit-linear-gradient(left, #f15861, #f78f6a);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+             background: -webkit-linear-gradient(right, #f04a5e, #f78f6a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;*/ }
   .note__title {
     color: #3c1218;
     font-family: Devonshire, Arial, Helvetica, sans-serif;
@@ -564,7 +573,7 @@ footer {
   text-decoration: none;
   height: 25rem;
   margin: 1rem 1rem 1rem 1rem;
-  font-weight: 2em;
+  font-weight: bold;
   font-size: 2em;
   background-color: #edefef;
   width: 40%; }
@@ -581,7 +590,7 @@ footer {
       padding-right: 5rem;
       height: 10rem;
       font-size: 1.2em;
-      font-weight: 1.2em; } }
+      font-weight: bold; } }
 
 .chic {
   -webkit-transform: scale(1);
@@ -593,9 +602,11 @@ footer {
   -webkit-transition-delay: 100ms;
           transition-delay: 100ms; }
   .chic__title {
-    background: -webkit-linear-gradient(right, #c77412, #905bfd);
-    -webkit-background-clip: text;
+    background: -webkit-linear-gradient(right, #905bfd, #c77412);
+    /* -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: Lobster Two;
     font-weight: bold; }
@@ -624,7 +635,7 @@ footer {
   text-decoration: none;
   height: 25rem;
   margin: 1rem 1rem 1rem 1rem;
-  font-weight: 2em;
+  font-weight: bold;
   font-size: 2em;
   background-color: #edefef;
   width: 40%;
@@ -642,7 +653,7 @@ footer {
       padding-right: 5rem;
       height: 10rem;
       font-size: 1.2em;
-      font-weight: 1.2em; } }
+      font-weight: bold; } }
 
 .delice {
   -webkit-transform: scale(1);
@@ -658,8 +669,10 @@ footer {
     font-style: italic;
     font-weight: bold;
     background: -webkit-linear-gradient(left, #905bfd, #0887fb);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .delice__title2 {
     font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
@@ -685,7 +698,7 @@ footer {
   text-decoration: none;
   height: 25rem;
   margin: 1rem 1rem 1rem 1rem;
-  font-weight: 2em;
+  font-weight: bold;
   font-size: 2em;
   background-color: #edefef;
   width: 40%; }
@@ -702,7 +715,7 @@ footer {
       padding-right: 5rem;
       height: 10rem;
       font-size: 1.2em;
-      font-weight: 1.2em; } }
+      font-weight: bold; } }
 
 .palette {
   -webkit-transform: scale(1);
@@ -715,11 +728,13 @@ footer {
           transition-delay: 100ms; }
   .palette__title {
     background: -webkit-linear-gradient(left, #42973c, #edefef);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold; }
+    font-weight: bold;
+    /* -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
   .palette__title2 {
     font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
     text-transform: uppercase;
@@ -750,20 +765,16 @@ footer {
   margin-top: 3em;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 2em;
+  font-weight: bold;
   padding-bottom: 2em;
   -webkit-box-shadow: 3px 4px 6px 4px #9e9e9e;
           box-shadow: 3px 4px 6px 4px #9e9e9e; }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .page-note__section {
-      width: 95%;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
+      width: 95%; } }
   @media screen and (max-width: 768px) {
     .page-note__section {
-      width: 95%;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
+      width: 90%; } }
 
 .title-note {
   font-family: Devonshire;
@@ -773,11 +784,13 @@ footer {
 p {
   font-family: Devonshire;
   text-align: center;
-  font-size: 2rem; }
+  font-size: 2em; }
   p > i {
     background: -webkit-linear-gradient(left, #f04a5e, #f78f6a);
-    -webkit-background-clip: text;
+    /* -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
 .title-note__mini1 {
@@ -855,30 +868,24 @@ p {
   margin-top: 3em;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 2em;
+  font-weight: bold;
   padding-bottom: 2em;
   -webkit-box-shadow: 3px 4px 6px 4px #9e9e9e;
           box-shadow: 3px 4px 6px 4px #9e9e9e; }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .page-delice__section {
-      width: 95%;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
+      width: 95%; } }
   @media screen and (max-width: 768px) {
     .page-delice__section {
-      width: 95%;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
+      width: 90%; } }
 
 .page-delice .title-delice {
   font-size: 3em;
   font-family: Parisienne, Geneva, Verdana, sans-serif;
   font-style: italic;
   font-weight: bold;
-  /*background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));*/
   background: -webkit-linear-gradient(left, #905bfd, #0887fb);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center; }
 
@@ -964,27 +971,24 @@ p {
   margin-top: 3em;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 2em;
+  font-weight: bold;
   padding-bottom: 2em;
   -webkit-box-shadow: 3px 4px 6px 4px #9e9e9e;
           box-shadow: 3px 4px 6px 4px #9e9e9e;
   background-color: #edefef; }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .page-chic__section {
-      width: 95%;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
+      width: 95%; } }
   @media screen and (max-width: 768px) {
     .page-chic__section {
-      width: 95%;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
+      width: 90%; } }
 
 .title-chic {
-  /*background: -webkit-gradient(linear, left center, left bottom, from($chic-color-first), to($chic-color-second));*/
-  background: -webkit-linear-gradient(right, #c77412, #905bfd);
+  background: -webkit-linear-gradient(right, #905bfd, #c77412);
+  /* -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Lobster Two;
   font-weight: bold;
@@ -993,7 +997,7 @@ p {
 
 .title-chic__mini1 {
   font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   color: #c77412;
   font-family: Caveat;
   font-style: italic;
@@ -1018,7 +1022,7 @@ p {
 
 .title-chic__mini2 {
   font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   color: #9c27b0;
   font-family: Caveat;
   font-style: italic;
@@ -1043,7 +1047,7 @@ p {
 
 .title-chic__mini3 {
   font-family: Caveat, Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   color: #905bfd;
   font-family: Caveat;
   font-style: italic;
@@ -1097,28 +1101,26 @@ p {
   margin-top: 3em;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 2em;
+  font-weight: bold;
   padding-bottom: 2em;
   -webkit-box-shadow: 3px 4px 6px 4px #9e9e9e;
           box-shadow: 3px 4px 6px 4px #9e9e9e;
   background-color: #edefef; }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .page-palette__section {
-      width: 95%;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
+      width: 95%; } }
   @media screen and (max-width: 768px) {
     .page-palette__section {
-      width: 95%;
-      margin-left: 1rem;
-      margin-right: 1rem; } }
+      width: 90%; } }
 
 .title-palette {
   font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 3em;
   background: -webkit-linear-gradient(left, #42973c, #edefef);
+  /* -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;*/
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;

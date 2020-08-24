@@ -19,12 +19,10 @@
 p 
 { font-family: Devonshire;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2em;
     & > i{
       background: -webkit-linear-gradient(left, #f04a5e, #f78f6a);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+      @include gradient;
     }
   } 
   .title-note__mini1{

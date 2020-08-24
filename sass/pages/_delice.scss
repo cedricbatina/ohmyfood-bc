@@ -14,10 +14,8 @@
     font-family: Parisienne, Geneva, Verdana, sans-serif;
     font-style: italic;
     font-weight: bold;
-    /*background: -webkit-gradient(linear, left center, left bottom, from($first-delice-color), to($second-delice-color));*/
     background: -webkit-linear-gradient(left, $chic-color-second, $second-delice-color);
     -webkit-background-clip: text;
-    background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
     }

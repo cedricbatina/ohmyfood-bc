@@ -50,15 +50,19 @@ margin-right: 1%;
     @include menu-animation; 
         & i:before 
         {
-            background-clip: text;
             background: -webkit-linear-gradient(left, $icon-color,#f78f6a);
-            -webkit-background-clip: text;
+            @include gradient;
+           /* -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+             background: -webkit-linear-gradient(right, #f04a5e, #f78f6a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;*/
+            
         }
         &__title
         {
-           color:$note-color-text;
+           color: $note-color-text;
            font-family: Devonshire, Arial, Helvetica, sans-serif;
            font-weight: bold;
         }
@@ -79,7 +83,7 @@ margin-right: 1%;
 .chic{
     @include menu-animation;
     &__title{   
-            background: -webkit-linear-gradient(right, $chic-color-first, $chic-color-second);
+            background: -webkit-linear-gradient(right, $chic-color-second, $chic-color-first);
             @include gradient;
             font-family: Lobster Two;
             font-weight: bold;
@@ -108,9 +112,8 @@ margin-right: 1%;
         font-style: italic;
         font-weight: bold;
         background: -webkit-linear-gradient(left, $chic-color-second, $second-delice-color);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include gradient;
+      
     } 
     &__title2
     {
@@ -131,11 +134,9 @@ margin-right: 1%;
     @include menu-animation;
     &__title{
         background: -webkit-linear-gradient(left, $palette-color, $section-background);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
         font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
+        @include gradient;
     } 
     &__title2{ 
         @include home-menu-font($color:$palette-color);
@@ -145,6 +146,3 @@ margin-right: 1%;
         @include menu-zoom; 
     }
 }
-
-
-
