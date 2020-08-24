@@ -6,7 +6,6 @@
     &__section{
         @include section-size;
         background-color: $section-background;
-        box-shadow: 3px 4px 6px 4px $shadow-color;
     }
 }
 .title-palette{

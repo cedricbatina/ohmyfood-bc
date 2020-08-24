@@ -6,8 +6,7 @@
     }
     &__section{
         @include section-size;
-        background-color: lighten($chic-color-first, 50);
-        box-shadow: 3px 4px 6px 4px $shadow-color;
+        background-color: #edefef;
     }
 }
 .title-chic{

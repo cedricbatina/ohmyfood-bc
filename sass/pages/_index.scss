@@ -51,7 +51,7 @@ margin-right: 1%;
         & i:before 
         {
             background-clip: text;
-            background: -webkit-linear-gradient(left, #f04a5e, #f78f6a);
+            background: -webkit-linear-gradient(left, $icon-color,#f78f6a);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -74,7 +74,7 @@ margin-right: 1%;
      }
 .chic-block
  { 
-    @include grid-size($background:lighten($chic-color-first,50));
+    @include grid-size($background: $section-background);
  }
 .chic{
     @include menu-animation;
@@ -96,7 +96,7 @@ margin-right: 1%;
     }
 .delice-block 
     {  
-      @include grid-size($background:lighten($first-delice-color, 40));
+      @include grid-size($background:$section-background);
       margin-right: 1%;
     }
 .delice

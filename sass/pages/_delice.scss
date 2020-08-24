@@ -5,9 +5,8 @@
     }
     &__section{
     font-family: Kalam, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
-    background-color: lighten($first-delice-color,40);
+    background-color: #edefef;
     @include section-size; 
-    box-shadow: 3px 4px 6px 4px $shadow-color;
     }
 
 .title-delice{
