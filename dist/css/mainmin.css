@@ -534,9 +534,6 @@ footer {
           transition-delay: 100ms; }
   .note i:before {
     background: -webkit-linear-gradient(left, #f15861, #f78f6a);
-    /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .note__title {
@@ -597,9 +594,6 @@ footer {
           transition-delay: 100ms; }
   .chic__title {
     background: -webkit-linear-gradient(right, #905bfd, #c77412);
-    /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: Lobster Two;
@@ -663,9 +657,6 @@ footer {
     font-style: italic;
     font-weight: bold;
     background: -webkit-linear-gradient(left, #905bfd, #0887fb);
-    /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .delice__title2 {
@@ -724,9 +715,6 @@ footer {
     background: -webkit-linear-gradient(left, #42973c, #edefef);
     font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
   .palette__title2 {
@@ -781,9 +769,6 @@ p {
   font-size: 2em; }
   p > i {
     background: -webkit-linear-gradient(left, #f04a5e, #f78f6a);
-    /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; }
 
@@ -979,9 +964,6 @@ p {
 
 .title-chic {
   background: -webkit-linear-gradient(right, #905bfd, #c77412);
-  /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Lobster Two;
@@ -1111,9 +1093,6 @@ p {
   font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 3em;
   background: -webkit-linear-gradient(left, #42973c, #edefef);
-  /* -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;*/
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Kaushan Script, Verdana, Geneva, Tahoma, sans-serif;
